@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import GlassButton from './GlassButton';
 
-const HERO_IMAGE = "/__generating__/img_dd210f2bc7c2.png";
+const HERO_IMAGE = "https://media.base44.com/images/public/69d37f9848f9698967903442/69b9a895b_generated_f1dc68dc.png";
 
 export default function Hero() {
   return (

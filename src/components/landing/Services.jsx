@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import ServiceCard from './ServiceCard';
 import SectionDivider from './SectionDivider';
 
-const IMAGE_WEB = "/__generating__/img_93b521257a1a.png";
-const IMAGE_AI = "/__generating__/img_04ac21aa1bb9.png";
-const IMAGE_AUTO = "/__generating__/img_7ddb85f53967.png";
+const IMAGE_WEB = "https://media.base44.com/images/public/69d37f9848f9698967903442/6b7a2ad35_generated_87d0786e.png";
+const IMAGE_AI = "https://media.base44.com/images/public/69d37f9848f9698967903442/b3a58d2d3_generated_7c88be8f.png";
+const IMAGE_AUTO = "https://media.base44.com/images/public/69d37f9848f9698967903442/3030f04b1_generated_362ce95b.png";
 
 const services = [
   {

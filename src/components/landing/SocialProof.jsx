@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import SectionDivider from './SectionDivider';
 
-const SOCIAL_BG = "/__generating__/img_4bbef3f8f27a.png";
+const SOCIAL_BG = "https://media.base44.com/images/public/69d37f9848f9698967903442/505e96159_generated_0981956a.png";
 
 const reviews = [
   {
