@@ -77,9 +77,14 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-4">
-          <span className="text-datagrey text-xs">
-            © {new Date().getFullYear()} Veloxis Digital. Alle Rechte vorbehalten.
-          </span>
+          <div className="flex flex-col gap-1">
+            <span className="text-datagrey text-xs">
+              © {new Date().getFullYear()} Veloxis Digital. Alle Rechte vorbehalten.
+            </span>
+            <span className="text-datagrey/20 text-[10px] tracking-wide select-none">
+              Realisiert durch unser internes Expertenteam · Veloxis Digital Agency
+            </span>
+          </div>
           <div className="flex gap-6">
             <a href="#" className="text-datagrey text-xs hover:text-neon transition-colors">Datenschutz</a>
             <a href="#" className="text-datagrey text-xs hover:text-neon transition-colors">Impressum</a>
