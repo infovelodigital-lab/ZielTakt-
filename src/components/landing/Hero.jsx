@@ -47,7 +47,7 @@ export default function Hero() {
               className="text-datagrey text-lg md:text-xl max-w-lg leading-relaxed"
               style={{ lineHeight: '1.6' }}
             >
-              Wir entwickeln maßgeschneiderte digitale Lösungen — von erstklassigem
+              Wir entwickeln maßgeschneiderte digitale Lösungen. Von erstklassigem
               Webdesign über intelligente KI-Chatbots bis hin zu vollautomatisierten Workflows.
             </motion.p>
 
