@@ -33,11 +33,9 @@ export default function Hero() {
               className="font-heading font-bold text-titanium leading-[0.95] tracking-[-0.04em]"
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
             >
-              DIGITALE
+              Wir bringen Ihnen automatisch neue Kunden –
               <br />
-              EXZELLENZ
-              <br />
-              <span className="text-gradient-blue">DURCH PRÄZISION.</span>
+              <span className="text-gradient-blue">mit KI & Automatisierung.</span>
             </motion.h1>
 
             <motion.p
