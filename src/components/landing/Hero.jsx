@@ -70,9 +70,9 @@ export default function Hero() {
               className="flex gap-12 pt-8 border-t border-border"
             >
               {[
-                { value: '50+', label: 'Projekte' },
-                { value: '98%', label: 'Zufriedenheit' },
-                { value: '24/7', label: 'Support' },
+                { value: 'Schnelle', label: 'Umsetzung' },
+                { value: 'Individuelle', label: 'Lösungen' },
+                { value: 'Persönlicher', label: 'Support' },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="font-heading font-bold text-2xl text-titanium">{stat.value}</div>
