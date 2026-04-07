@@ -2,43 +2,30 @@ import { motion } from 'framer-motion';
 import ServiceCard from './ServiceCard';
 import SectionDivider from './SectionDivider';
 
-const IMAGE_WEB = "https://media.base44.com/images/public/69d37f9848f9698967903442/6b7a2ad35_generated_87d0786e.png";
-const IMAGE_AI = "https://media.base44.com/images/public/69d37f9848f9698967903442/b3a58d2d3_generated_7c88be8f.png";
-const IMAGE_AUTO = "https://media.base44.com/images/public/69d37f9848f9698967903442/3030f04b1_generated_362ce95b.png";
-
 const services = [
   {
-    title: 'Webdesign',
-    description: 'Maßgeschneiderte Webauftritte, die Ihre Marke auf höchstem Niveau repräsentieren. Pixel-perfekte Umsetzung mit modernster Technologie.',
-    features: [
-      'Responsive Design & Mobile-First',
-      'UI/UX nach Schweizer Präzision',
-      'Performance-optimierte Architektur',
-      'SEO & Conversion-Optimierung',
-    ],
-    image: IMAGE_WEB,
+    number: '01',
+    title: 'Webdesign & Entwicklung',
+    description: 'Wir entwickeln keine Standard-Webseiten, sondern digitale Erlebnisse. Hochperformant, sicher und optimiert für maximale Conversions.',
+    features: ['Responsive Design & Mobile-First', 'UI/UX nach Schweizer Präzision', 'Performance-optimierte Architektur', 'SEO & Conversion-Optimierung'],
   },
   {
-    title: 'KI-Chatbots',
-    description: 'Intelligente Konversationsagenten, die Ihre Kundenbetreuung revolutionieren. Maßgeschneiderte Algorithmen für maximale Effizienz.',
-    features: [
-      'Natürliche Sprachverarbeitung (NLP)',
-      'Nahtlose System-Integration',
-      'Lernfähige Dialogsysteme',
-      'Mehrsprachiger Support',
-    ],
-    image: IMAGE_AI,
+    number: '02',
+    title: 'KI-Chatbots & Support',
+    description: 'Intelligente Assistenten, die Ihre Kunden verstehen. Wir integrieren modernste LLMs, die Leads qualifizieren und Ihren Support entlasten.',
+    features: ['Natürliche Sprachverarbeitung (NLP)', 'Lead-Qualifizierung automatisch', 'Nahtlose System-Integration', 'Mehrsprachiger Support'],
   },
   {
+    number: '03',
     title: 'Workflow-Automatisierung',
-    description: 'Integrierte Workflows, die repetitive Prozesse eliminieren und Ihr Team auf strategische Aufgaben fokussieren lassen.',
-    features: [
-      'Prozessanalyse & Optimierung',
-      'API-Integrationen',
-      'Automatisierte Datenpipelines',
-      'Echtzeit-Monitoring & Reports',
-    ],
-    image: IMAGE_AUTO,
+    description: 'Wir eliminieren repetitive Aufgaben. Durch nahtlose API-Integrationen verbinden wir Ihre Tools zu einem hocheffizienten, autonomen System.',
+    features: ['Prozessanalyse & Optimierung', 'API-Integrationen', 'Automatisierte Datenpipelines', 'Echtzeit-Monitoring & Reports'],
+  },
+  {
+    number: '04',
+    title: 'Branding & Identität',
+    description: 'Einzigartige visuelle Identitäten, die Vertrauen schaffen. Vom Logo-Design bis zum Brand-Guide – wir geben Ihrer Marke ein Gesicht.',
+    features: ['Logo & Corporate Design', 'Brand Strategy & Positionierung', 'Visuelle Identitätssysteme', 'Brand-Guide & Styleguide'],
   },
 ];
 
@@ -78,7 +65,7 @@ export default function Services() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {services.map((service, i) => (
             <ServiceCard key={service.title} {...service} index={i} />
           ))}

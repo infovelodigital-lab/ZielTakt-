@@ -142,11 +142,10 @@ export default function Contact() {
                 Potenzial entfalten können.
               </p>
               <a
-                href="mailto:hello@veloxis.digital" className="text-neon text-lg font-medium hover:glow-text transition-all duration-500 inline-flex items-center gap-2">info.velodigital@gmail.com
-
-
-
-
+                href="mailto:info@veloxis-digital.com"
+                className="text-neon text-lg font-medium hover:glow-text transition-all duration-500 inline-flex items-center gap-2"
+              >
+                info@veloxis-digital.com
               </a>
             </div>
 

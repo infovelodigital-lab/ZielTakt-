@@ -25,7 +25,7 @@ export default function VirtualOffice() {
             className="font-heading font-bold text-titanium tracking-[-0.04em]"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
           >
-            VIRTUAL OFFICE KONSTANZ.
+            STRATEGISCHE PRÄSENZ IN KONSTANZ.
           </motion.h2>
         </div>
 

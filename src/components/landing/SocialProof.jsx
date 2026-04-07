@@ -6,27 +6,21 @@ const SOCIAL_BG = "https://media.base44.com/images/public/69d37f9848f96989679034
 
 const reviews = [
   {
-    text: 'Veloxis hat unsere digitale Präsenz komplett transformiert. Die Ergebnisse haben unsere Erwartungen übertroffen.',
+    text: 'Veloxis hat unsere digitale Präsenz komplett transformiert. Die Ergebnisse bei der Lead-Generierung haben unsere Erwartungen weit übertroffen.',
     author: 'Dr. Marcus Weber',
     role: 'CEO, TechVentures GmbH',
     stars: 5,
   },
   {
-    text: 'Der KI-Chatbot hat unseren Kundensupport revolutioniert — 60% weniger Tickets bei höherer Zufriedenheit.',
+    text: 'Der KI-Chatbot hat unseren Kundensupport revolutioniert – 60% weniger manuelle Anfragen bei deutlich höherer Zufriedenheit.',
     author: 'Anna Schreiber',
-    role: 'Head of Operations, Meridian AG',
+    role: 'Head of Ops, Meridian AG',
     stars: 5,
   },
   {
-    text: 'Präzision, Geschwindigkeit und außergewöhnliche Qualität. Veloxis ist unser strategischer Digitalpartner.',
+    text: 'Präzision und Geschwindigkeit. Veloxis ist nicht nur ein Dienstleister, sondern unser strategischer Partner für die digitale Zukunft.',
     author: 'Thomas Hartmann',
     role: 'Geschäftsführer, Bodensee Innovations',
-    stars: 5,
-  },
-  {
-    text: 'Die Workflow-Automatisierung spart uns 20 Stunden pro Woche. Der ROI war bereits nach einem Monat sichtbar.',
-    author: 'Lisa Keller',
-    role: 'COO, Alpine Solutions',
     stars: 5,
   },
 ];
