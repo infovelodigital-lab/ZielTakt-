@@ -33,9 +33,9 @@ export default function Hero() {
               className="font-heading font-bold text-titanium leading-[0.95] tracking-[-0.04em]"
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
             >
-              Wir bringen Ihnen automatisch neue Kunden –
+              Mehr Kunden. Weniger Aufwand.
               <br />
-              <span className="text-gradient-blue">mit KI & Automatisierung.</span>
+              <span className="text-gradient-blue">Durch smarte Automatisierung.</span>
             </motion.h1>
 
             <motion.p
@@ -55,14 +55,23 @@ export default function Hero() {
               className="flex flex-wrap gap-4"
             >
               <GlassButton href="#contact">
-                Kostenlose Beratung
+                Kostenlose Analyse sichern
               </GlassButton>
-              <GlassButton href="#services" variant="secondary">
-                Unsere Services
+              <GlassButton href="#proof" variant="secondary">
+                Ergebnisse ansehen
               </GlassButton>
             </motion.div>
 
-            {/* Stats */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.85 }}
+              className="text-datagrey/60 text-xs tracking-wide"
+            >
+              100% unverbindlich – keine Verpflichtung
+            </motion.p>
+
+            {/* Trust elements */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
