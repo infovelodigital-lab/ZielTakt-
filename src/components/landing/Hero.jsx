@@ -45,8 +45,7 @@ export default function Hero() {
               className="text-datagrey text-lg md:text-xl max-w-lg leading-relaxed"
               style={{ lineHeight: '1.6' }}
             >
-              Wir entwickeln maßgeschneiderte digitale Lösungen. Von erstklassigem
-              Webdesign über intelligente KI-Chatbots bis hin zu vollautomatisierten Workflows.
+              Wir erstellen moderne Websites und KI-Systeme, die für Sie arbeiten: Mehr Anfragen, automatisierte Prozesse und weniger manuelle Arbeit.
             </motion.p>
 
             <motion.div
