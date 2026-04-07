@@ -65,7 +65,7 @@ export default function Services() {
             className="font-heading font-bold text-titanium tracking-[-0.04em]"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
           >
-            DAS NEURAL GRID.
+            Unsere Leistungen
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -74,8 +74,7 @@ export default function Services() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-datagrey text-lg max-w-2xl leading-relaxed"
           >
-            Drei Säulen digitaler Exzellenz — entwickelt mit Schweizer Präzision
-            und modernster Technologie.
+            Drei Lösungen, die Ihr Unternehmen digital voranbringen: Mehr Kunden gewinnen, Prozesse automatisieren und professionell auftreten.
           </motion.p>
         </div>
 
