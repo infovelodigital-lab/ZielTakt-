@@ -8,24 +8,28 @@ const services = [
     title: 'Webdesign & Entwicklung',
     description: 'Wir entwickeln keine Standard-Webseiten, sondern digitale Erlebnisse. Hochperformant, sicher und optimiert für maximale Conversions.',
     features: ['Responsive Design & Mobile-First', 'UI/UX nach Schweizer Präzision', 'Performance-optimierte Architektur', 'SEO & Conversion-Optimierung'],
+    image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/59d22bf41_generated_image.png',
   },
   {
     number: '02',
     title: 'KI-Chatbots & Support',
     description: 'Intelligente Assistenten, die Ihre Kunden verstehen. Wir integrieren modernste LLMs, die Leads qualifizieren und Ihren Support entlasten.',
     features: ['Natürliche Sprachverarbeitung (NLP)', 'Lead-Qualifizierung automatisch', 'Nahtlose System-Integration', 'Mehrsprachiger Support'],
+    image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/ce304d02c_generated_image.png',
   },
   {
     number: '03',
     title: 'Workflow-Automatisierung',
     description: 'Wir eliminieren repetitive Aufgaben. Durch nahtlose API-Integrationen verbinden wir Ihre Tools zu einem hocheffizienten, autonomen System.',
     features: ['Prozessanalyse & Optimierung', 'API-Integrationen', 'Automatisierte Datenpipelines', 'Echtzeit-Monitoring & Reports'],
+    image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/5e732a9f6_generated_image.png',
   },
   {
     number: '04',
     title: 'Branding & Identität',
     description: 'Einzigartige visuelle Identitäten, die Vertrauen schaffen. Vom Logo-Design bis zum Brand-Guide – wir geben Ihrer Marke ein Gesicht.',
     features: ['Logo & Corporate Design', 'Brand Strategy & Positionierung', 'Visuelle Identitätssysteme', 'Brand-Guide & Styleguide'],
+    image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/ff9b43035_generated_image.png',
   },
 ];
 

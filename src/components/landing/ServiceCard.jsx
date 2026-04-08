@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
-export default function ServiceCard({ title, description, features, number, index }) {
+export default function ServiceCard({ title, description, features, number, image, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -18,6 +18,18 @@ export default function ServiceCard({ title, description, features, number, inde
         <div className="text-neon/20 font-heading font-bold text-5xl absolute top-6 right-8">
           {number}
         </div>
+
+        {/* Visual image */}
+        {image && (
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-2">
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent z-10" />
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+        )}
 
         <h3 className="font-heading font-bold text-titanium text-2xl tracking-tight group-hover:text-neon transition-colors duration-500">
           {title}
