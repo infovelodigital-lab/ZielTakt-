@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { base44 } from '@/api/base44Client';
 import { motion } from 'framer-motion';
 import { Send, ArrowUpRight } from 'lucide-react';
 import SectionDivider from './SectionDivider';
@@ -30,11 +31,19 @@ const socialLinks = [
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    await base44.integrations.Core.SendEmail({
+      to: 'info@veloxis-digital.com',
+      subject: `Neue Anfrage von ${formData.name}`,
+      body: `Name: ${formData.name}\nE-Mail: ${formData.email}\n\nNachricht:\n${formData.message}`,
+    });
+    setLoading(false);
     setSent(true);
-    setTimeout(() => setSent(false), 3000);
+    setTimeout(() => setSent(false), 4000);
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -108,22 +117,21 @@ export default function Contact() {
             </div>
 
             <div className="pt-4">
-              {sent ?
+              {sent ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="glass rounded-full px-8 py-4 text-neon text-center font-medium glow-blue">
-                
                   ✓ Nachricht gesendet
-                </motion.div> :
-
-              <GlassButton>
+                </motion.div>
+              ) : (
+              <GlassButton disabled={loading}>
                   <span className="flex items-center gap-2">
-                    Nachricht senden
+                    {loading ? 'Wird gesendet…' : 'Nachricht senden'}
                     <Send className="w-4 h-4" />
                   </span>
                 </GlassButton>
-              }
+              )}
             </div>
           </motion.form>
 
