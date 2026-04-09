@@ -33,9 +33,9 @@ export default function Hero() {
               className="font-heading font-bold text-titanium leading-[0.95] tracking-[-0.04em]"
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
             >
-              Mehr Kunden. Weniger Aufwand.
+              Digitale Präzision für Zahnarztpraxen
               <br />
-              <span className="text-gradient-blue">Durch smarte Automatisierung.</span>
+              <span className="text-gradient-blue">& Premium-Unternehmen.</span>
             </motion.h1>
 
             <motion.p
@@ -45,7 +45,7 @@ export default function Hero() {
               className="text-datagrey text-lg md:text-xl max-w-lg leading-relaxed"
               style={{ lineHeight: '1.6' }}
             >
-              Wir erstellen moderne Websites und KI-Systeme, die für Sie arbeiten: Mehr Anfragen, automatisierte Prozesse und weniger manuelle Arbeit.
+              Wir transformieren Ihren digitalen Auftritt und automatisieren Ihre Patientenakquise. Maßgeschneiderte Web-Architektur und intelligente KI-Systeme für Marktführer in der gesamten DACH-Region.
             </motion.p>
 
             <motion.div
@@ -55,7 +55,7 @@ export default function Hero() {
               className="flex flex-wrap gap-4"
             >
               <GlassButton href="#contact">
-                Kostenlose Analyse sichern
+                Kostenlose Potenzialanalyse sichern
               </GlassButton>
               <GlassButton href="#proof" variant="secondary">
                 Ergebnisse ansehen

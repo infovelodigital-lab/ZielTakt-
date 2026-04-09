@@ -1,4 +1,5 @@
 import Navbar from '../components/landing/Navbar';
+import Positioning from '../components/landing/Positioning';
 import Hero from '../components/landing/Hero';
 import Services from '../components/landing/Services';
 import SocialProof from '../components/landing/SocialProof';
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="bg-void min-h-screen">
       <Navbar />
       <Hero />
+      <Positioning />
       <Services />
       <SocialProof />
       <VirtualOffice />

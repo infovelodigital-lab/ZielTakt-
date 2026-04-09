@@ -35,7 +35,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-datagrey text-sm leading-relaxed max-w-xs">
-              Digitale Exzellenz durch Präzision. Ihre Full-Service Digitalagentur am Bodensee.
+              Veloxis Digital. Strategisch verankert am Bodensee. Wir digitalisieren den Mittelstand und medizinische Fachpraxen in Deutschland, der Schweiz und Österreich.
             </p>
           </div>
 
@@ -81,13 +81,13 @@ export default function Footer() {
             <span className="text-datagrey text-xs">
               © {new Date().getFullYear()} Veloxis Digital. Alle Rechte vorbehalten.
             </span>
-            <span className="text-datagrey/20 text-[10px] tracking-wide select-none">
-              Realisiert durch unser internes Expertenteam · Veloxis Digital Agency
+            <span className="text-datagrey/30 text-[10px] tracking-wide select-none">
+              Veloxis Digital · Einzelunternehmen · Digitalagentur · Konstanz, Deutschland
             </span>
           </div>
           <div className="flex gap-6">
-            <a href="#" className="text-datagrey text-xs hover:text-neon transition-colors">Datenschutz</a>
-            <a href="#" className="text-datagrey text-xs hover:text-neon transition-colors">Impressum</a>
+            <a href="/datenschutz" className="text-datagrey text-xs hover:text-neon transition-colors">Datenschutz</a>
+            <a href="/impressum" className="text-datagrey text-xs hover:text-neon transition-colors">Impressum</a>
           </div>
         </div>
       </div>

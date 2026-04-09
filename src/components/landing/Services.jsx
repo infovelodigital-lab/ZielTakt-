@@ -5,31 +5,24 @@ import SectionDivider from './SectionDivider';
 const services = [
   {
     number: '01',
-    title: 'Webdesign & Entwicklung',
-    description: 'Wir entwickeln keine Standard-Webseiten, sondern digitale Erlebnisse. Hochperformant, sicher und optimiert für maximale Conversions.',
+    title: 'High-End Web-Architektur',
+    description: 'Ihre Praxis verdient mehr als eine Standard-Vorlage. Wir entwickeln blitzschnelle, visuell beeindruckende Websites, die Vertrauen ausstrahlen und Ihre Expertise perfekt in Szene setzen.',
     features: ['Responsive Design & Mobile-First', 'UI/UX nach Schweizer Präzision', 'Performance-optimierte Architektur', 'SEO & Conversion-Optimierung'],
     image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/59d22bf41_generated_image.png',
   },
   {
     number: '02',
-    title: 'KI-Chatbots & Support',
-    description: 'Intelligente Assistenten, die Ihre Kunden verstehen. Wir integrieren modernste LLMs, die Leads qualifizieren und Ihren Support entlasten.',
+    title: 'Intelligente KI-Assistenten',
+    description: 'Entlasten Sie Ihren Empfang. Unsere maßgeschneiderten KI-Chatbots beantworten Patientenfragen zu Behandlungen, Öffnungszeiten und Notfällen in Echtzeit – 24 Stunden am Tag, 7 Tage die Woche.',
     features: ['Natürliche Sprachverarbeitung (NLP)', 'Lead-Qualifizierung automatisch', 'Nahtlose System-Integration', 'Mehrsprachiger Support'],
     image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/ce304d02c_generated_image.png',
   },
   {
     number: '03',
-    title: 'Workflow-Automatisierung',
-    description: 'Wir eliminieren repetitive Aufgaben. Durch nahtlose API-Integrationen verbinden wir Ihre Tools zu einem hocheffizienten, autonomen System.',
+    title: 'Automatisierte Terminvergabe',
+    description: 'Von der ersten Anfrage bis zum festen Termin im Kalender. Wir verbinden Ihre Website nahtlos mit Ihren bestehenden Buchungssystemen für einen reibungslosen, automatisierten Ablauf ohne Personalaufwand.',
     features: ['Prozessanalyse & Optimierung', 'API-Integrationen', 'Automatisierte Datenpipelines', 'Echtzeit-Monitoring & Reports'],
     image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/5e732a9f6_generated_image.png',
-  },
-  {
-    number: '04',
-    title: 'Branding & Identität',
-    description: 'Einzigartige visuelle Identitäten, die Vertrauen schaffen. Vom Logo-Design bis zum Brand-Guide – wir geben Ihrer Marke ein Gesicht.',
-    features: ['Logo & Corporate Design', 'Brand Strategy & Positionierung', 'Visuelle Identitätssysteme', 'Brand-Guide & Styleguide'],
-    image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/ff9b43035_generated_image.png',
   },
 ];
 
@@ -69,7 +62,7 @@ export default function Services() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <ServiceCard key={service.title} {...service} index={i} />
           ))}
