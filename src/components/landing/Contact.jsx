@@ -37,7 +37,7 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     await base44.integrations.Core.SendEmail({
-      to: 'info@veloxis-digital.com',
+      to: 'info.velodigital@gmail.com',
       subject: `Neue Anfrage von ${formData.name}`,
       body: `Name: ${formData.name}\nE-Mail: ${formData.email}\n\nNachricht:\n${formData.message}`,
     });
@@ -150,10 +150,10 @@ export default function Contact() {
                 Potenzial entfalten können.
               </p>
               <a
-                href="mailto:info@veloxis-digital.com"
+                href="mailto:info.velodigital@gmail.com"
                 className="text-neon text-lg font-medium hover:glow-text transition-all duration-500 inline-flex items-center gap-2"
-              >
-                info@veloxis-digital.com
+                >
+                info.velodigital@gmail.com
               </a>
             </div>
 
