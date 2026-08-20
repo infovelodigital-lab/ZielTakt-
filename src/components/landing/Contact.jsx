@@ -224,4 +224,4 @@ export default function Contact() {
       </div>
     </section>
   );
-}
+}// updated
