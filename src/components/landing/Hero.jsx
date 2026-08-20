@@ -88,29 +88,24 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right visual — modern animated dashboard */}
+          {/* Right visual — compact modern dashboard */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-2 relative"
           >
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden glass-strong">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden glass-strong">
               {/* Animated aurora blobs */}
               <motion.div
                 animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
                 transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-10 -left-10 w-64 h-64 rounded-full bg-neon/40 blur-3xl"
+                className="absolute -top-10 -left-10 w-56 h-56 rounded-full bg-neon/40 blur-3xl"
               />
               <motion.div
                 animate={{ x: [0, -30, 0], y: [0, 25, 0] }}
                 transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -bottom-10 -right-10 w-64 h-64 rounded-full bg-[#0066FF]/40 blur-3xl"
-              />
-              <motion.div
-                animate={{ x: [0, 20, 0], y: [0, -30, 0] }}
-                transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute top-1/2 left-1/2 w-56 h-56 rounded-full bg-[#7C3AED]/25 blur-3xl"
+                className="absolute -bottom-10 -right-10 w-56 h-56 rounded-full bg-[#0066FF]/40 blur-3xl"
               />
 
               {/* Subtle grid overlay */}
@@ -123,61 +118,70 @@ export default function Hero() {
                 <rect width="100%" height="100%" fill="url(#hero-grid)" />
               </svg>
 
-              {/* Floating dashboard card */}
-              <div className="absolute inset-0 flex items-center justify-center p-6 md:p-8">
-                <motion.div
-                  animate={{ y: [0, -12, 0] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                  className="w-full rounded-2xl glass-strong p-5 space-y-5 shadow-2xl"
-                >
-                  {/* Header */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon to-neon-dark flex items-center justify-center font-heading font-bold text-void text-sm">
-                        V
-                      </div>
-                      <div>
-                        <div className="text-titanium text-sm font-semibold leading-tight">Veloxis Studio</div>
-                        <div className="text-datagrey text-[10px]">Lokale Sichtbarkeit</div>
-                      </div>
+              {/* Dashboard filling the frame */}
+              <div className="absolute inset-0 p-4 md:p-5 flex flex-col gap-3">
+                {/* Header */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-neon to-neon-dark flex items-center justify-center font-heading font-bold text-void text-sm">
+                      V
                     </div>
-                    <span className="flex items-center gap-1.5 text-[10px] text-neon bg-neon/10 border border-neon/20 rounded-full px-2.5 py-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-neon animate-pulse" />
-                      Aktiv
-                    </span>
+                    <div>
+                      <div className="text-titanium text-sm font-semibold leading-tight">Veloxis Studio</div>
+                      <div className="text-datagrey text-[10px]">Lokale Sichtbarkeit</div>
+                    </div>
                   </div>
+                  <span className="flex items-center gap-1.5 text-[10px] text-neon bg-neon/10 border border-neon/20 rounded-full px-2.5 py-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-neon animate-pulse" />
+                    Aktiv
+                  </span>
+                </div>
 
-                  {/* Big metric */}
-                  <div className="space-y-1">
+                {/* Main panels */}
+                <div className="grid grid-cols-2 gap-3 flex-1">
+                  {/* Metric panel */}
+                  <div className="glass rounded-xl p-4 flex flex-col justify-between">
+                    <div className="text-datagrey text-[10px] tracking-widest uppercase">PageSpeed</div>
                     <div className="flex items-end gap-1">
                       <span className="font-heading font-bold text-titanium text-4xl leading-none">98</span>
-                      <span className="text-datagrey text-sm mb-1">/100</span>
+                      <span className="text-datagrey text-xs mb-1">/100</span>
                     </div>
-                    <div className="text-datagrey text-[11px] tracking-wide">Google PageSpeed Score</div>
+                    <div className="h-1.5 w-full rounded-full bg-neon/10 overflow-hidden">
+                      <div className="h-full w-[98%] rounded-full bg-gradient-to-r from-neon-dark to-neon" />
+                    </div>
                   </div>
 
-                  {/* Mini bar chart */}
-                  <div className="flex items-end justify-between gap-1.5 h-16">
-                    {[40, 65, 50, 80, 60, 95, 75].map((h, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ height: 0 }}
-                        animate={{ height: `${h}%` }}
-                        transition={{ duration: 0.8, delay: 0.6 + i * 0.08, ease: 'easeOut' }}
-                        className="flex-1 rounded-t-md bg-gradient-to-t from-neon-dark/40 to-neon"
-                      />
-                    ))}
+                  {/* Chart panel */}
+                  <div className="glass rounded-xl p-4 flex flex-col justify-between">
+                    <div className="text-datagrey text-[10px] tracking-widest uppercase">Sichtbarkeit</div>
+                    <div className="flex items-end justify-between gap-1 flex-1 my-2">
+                      {[40, 65, 50, 80, 60, 95, 75].map((h, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ height: 0 }}
+                          animate={{ height: `${h}%` }}
+                          transition={{ duration: 0.7, delay: 0.6 + i * 0.08, ease: 'easeOut' }}
+                          className="flex-1 rounded-t-md bg-gradient-to-t from-neon-dark/40 to-neon"
+                        />
+                      ))}
+                    </div>
+                    <div className="text-neon text-[10px] font-medium">+24% diese Woche</div>
                   </div>
+                </div>
 
-                  {/* Chips */}
-                  <div className="flex gap-2">
-                    {['SEO', 'Lokal', 'Sicher'].map((chip) => (
-                      <span key={chip} className="text-[10px] text-titanium/80 bg-neon/5 border border-neon/15 rounded-full px-3 py-1">
-                        {chip}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
+                {/* Bottom stat tiles */}
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { v: '#1', l: 'Google lokal' },
+                    { v: 'A+', l: 'SSL-Sicherheit' },
+                    { v: '<1s', l: 'Ladezeit' },
+                  ].map((t) => (
+                    <div key={t.l} className="glass rounded-xl p-3 text-center">
+                      <div className="font-heading font-bold text-neon text-lg leading-none">{t.v}</div>
+                      <div className="text-datagrey text-[9px] tracking-wide mt-1">{t.l}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="absolute -inset-8 bg-neon/10 rounded-3xl blur-3xl -z-10" />
