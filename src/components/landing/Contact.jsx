@@ -7,7 +7,7 @@ import GlassButton from './GlassButton';
 const CONTACT_EMAIL = 'info.velodigital@gmail.com';
 const CONTACT_PHONE = '+49 151 23456789';
 const WEB3FORMS_ACCESS_KEY = 'b120e0f3-17e8-4071-b046-227eda749ae6';
-
+ 
 // Platzhalter für spätere Social-Media-Links (Instagram, TikTok)
 const socialLinks = [
   { label: 'Instagram', icon: 'instagram', href: '#' },
