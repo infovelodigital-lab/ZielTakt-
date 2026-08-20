@@ -166,7 +166,7 @@ export default function Contact() {
 
             <div className="space-y-5">
               
-                href={`mailto:${CONTACT_EMAIL}`}
+                <a href={`mailto:${CONTACT_EMAIL}`}
                 className="flex items-center gap-4 group"
               >
                 <div className="w-11 h-11 rounded-xl glass flex items-center justify-center group-hover:glow-blue transition-all duration-500">
@@ -179,7 +179,7 @@ export default function Contact() {
               </a>
 
               
-                href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`}
+                <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`}
                 className="flex items-center gap-4 group"
               >
                 <div className="w-11 h-11 rounded-xl glass flex items-center justify-center group-hover:glow-blue transition-all duration-500">
@@ -209,7 +209,7 @@ export default function Contact() {
                 {socialLinks.map((link) => (
                   
                     key={link.label}
-                    href={link.href}
+                    <a href={link.href}
                     title="Folgt bald"
                     className="w-12 h-12 rounded-xl border border-dashed border-neon/20 flex items-center justify-center text-datagrey/50 cursor-default"
                   >
