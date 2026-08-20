@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { base44 } from '@/api/base44Client';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import SectionDivider from './SectionDivider';
@@ -7,6 +6,7 @@ import GlassButton from './GlassButton';
 
 const CONTACT_EMAIL = 'info.velodigital@gmail.com';
 const CONTACT_PHONE = '+49 151 23456789';
+const WEB3FORMS_ACCESS_KEY = 'b120e0f3-17e8-4071-b046-227eda749ae6';
 
 // Platzhalter für spätere Social-Media-Links (Instagram, TikTok)
 const socialLinks = [
@@ -37,15 +37,31 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await base44.integrations.Core.SendEmail({
-      to: CONTACT_EMAIL,
-      subject: `Neue Anfrage von ${formData.name}`,
-      body: `Name: ${formData.name}\nE-Mail: ${formData.email}\nTelefon: ${formData.phone}\n\nNachricht:\n${formData.message}`,
-    });
-    setLoading(false);
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Neue Anfrage von ${formData.name}`,
+          from_name: 'Veloxis Digital – Kontaktformular',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
+      const result = await response.json();
+      if (result.success) {
+        setSent(true);
+        setTimeout(() => setSent(false), 4000);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -149,7 +165,7 @@ export default function Contact() {
             </p>
 
             <div className="space-y-5">
-              <a
+              
                 href={`mailto:${CONTACT_EMAIL}`}
                 className="flex items-center gap-4 group"
               >
@@ -162,7 +178,7 @@ export default function Contact() {
                 </div>
               </a>
 
-              <a
+              
                 href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`}
                 className="flex items-center gap-4 group"
               >
@@ -191,7 +207,7 @@ export default function Contact() {
               <span className="text-datagrey text-xs tracking-widest uppercase">Folgen Sie uns</span>
               <div className="flex gap-3">
                 {socialLinks.map((link) => (
-                  <a
+                  
                     key={link.label}
                     href={link.href}
                     title="Folgt bald"
