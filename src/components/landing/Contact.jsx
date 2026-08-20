@@ -1,35 +1,36 @@
 import { useState } from 'react';
 import { base44 } from '@/api/base44Client';
 import { motion } from 'framer-motion';
-import { Send, ArrowUpRight } from 'lucide-react';
+import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import SectionDivider from './SectionDivider';
 import GlassButton from './GlassButton';
 
+const CONTACT_EMAIL = 'info.velodigital@gmail.com';
+const CONTACT_PHONE = '+49 151 23456789';
+
+// Platzhalter für spätere Social-Media-Links (Instagram, TikTok)
 const socialLinks = [
-{
-  label: 'Instagram',
-  icon:
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5">
-        <rect x="2" y="2" width="20" height="20" rx="5" />
-        <circle cx="12" cy="12" r="5" />
-        <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
-      </svg>,
+  { label: 'Instagram', icon: 'instagram', href: '#' },
+  { label: 'TikTok', icon: 'tiktok', href: '#' },
+];
 
-  href: '#'
-},
-{
-  label: 'TikTok',
-  icon:
-  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.47V13a8.28 8.28 0 005.58 2.15V11.7a4.85 4.85 0 01-3.59-1.58V6.69h3.59z" />
-      </svg>,
-
-  href: '#'
-}];
-
+const socialIcons = {
+  instagram: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5">
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  tiktok: (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.47V13a8.28 8.28 0 005.58 2.15V11.7a4.85 4.85 0 01-3.59-1.58V6.69h3.59z" />
+    </svg>
+  ),
+};
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -37,14 +38,14 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     await base44.integrations.Core.SendEmail({
-      to: 'info.velodigital@gmail.com',
+      to: CONTACT_EMAIL,
       subject: `Neue Anfrage von ${formData.name}`,
-      body: `Name: ${formData.name}\nE-Mail: ${formData.email}\n\nNachricht:\n${formData.message}`,
+      body: `Name: ${formData.name}\nE-Mail: ${formData.email}\nTelefon: ${formData.phone}\n\nNachricht:\n${formData.message}`,
     });
     setLoading(false);
     setSent(true);
     setTimeout(() => setSent(false), 4000);
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
   return (
@@ -57,8 +58,8 @@ export default function Contact() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-neon text-xs font-medium tracking-[0.3em] uppercase">
-            
+            className="text-neon text-xs font-medium tracking-[0.3em] uppercase"
+          >
             Kontakt
           </motion.span>
           <motion.h2
@@ -67,9 +68,9 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="font-heading font-bold text-titanium tracking-[-0.04em]"
-            style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
-            
-            LASSEN SIE UNS SPRECHEN.
+            style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
+          >
+            Lassen Sie uns sprechen.
           </motion.h2>
         </div>
 
@@ -81,26 +82,26 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="space-y-8">
-            
+            className="space-y-8"
+          >
             {[
-            { name: 'name', label: 'Name', type: 'text', placeholder: 'Ihr Name' },
-            { name: 'email', label: 'E-Mail', type: 'email', placeholder: 'ihre@email.de' }].
-            map((field) =>
-            <div key={field.name} className="group">
+              { name: 'name', label: 'Name', type: 'text', placeholder: 'Ihr Name' },
+              { name: 'email', label: 'E-Mail', type: 'email', placeholder: 'ihre@email.de' },
+              { name: 'phone', label: 'Telefon', type: 'tel', placeholder: '+49 151 ...' },
+            ].map((field) => (
+              <div key={field.name} className="group">
                 <label className="text-datagrey text-xs tracking-widest uppercase block mb-3">
                   {field.label}
                 </label>
                 <input
-                type={field.type}
-                value={formData[field.name]}
-                onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
-                placeholder={field.placeholder}
-                required
-                className="w-full bg-transparent border-0 border-b border-border pb-3 text-titanium text-lg placeholder:text-datagrey/40 focus:outline-none focus:border-neon transition-colors duration-500" />
-              
+                  type={field.type}
+                  value={formData[field.name]}
+                  onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
+                  placeholder={field.placeholder}
+                  className="w-full bg-transparent border-0 border-b border-border pb-3 text-titanium text-lg placeholder:text-datagrey/40 focus:outline-none focus:border-neon transition-colors duration-500"
+                />
               </div>
-            )}
+            ))}
 
             <div className="group">
               <label className="text-datagrey text-xs tracking-widest uppercase block mb-3">
@@ -110,22 +111,22 @@ export default function Contact() {
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 placeholder="Erzählen Sie uns von Ihrem Projekt..."
-                required
                 rows={4}
-                className="w-full bg-transparent border-0 border-b border-border pb-3 text-titanium text-lg placeholder:text-datagrey/40 focus:outline-none focus:border-neon transition-colors duration-500 resize-none" />
-              
+                className="w-full bg-transparent border-0 border-b border-border pb-3 text-titanium text-lg placeholder:text-datagrey/40 focus:outline-none focus:border-neon transition-colors duration-500 resize-none"
+              />
             </div>
 
             <div className="pt-4">
               {sent ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="glass rounded-full px-8 py-4 text-neon text-center font-medium glow-blue">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="glass rounded-full px-8 py-4 text-neon text-center font-medium glow-blue"
+                >
                   ✓ Nachricht gesendet
                 </motion.div>
               ) : (
-              <GlassButton disabled={loading}>
+                <GlassButton disabled={loading}>
                   <span className="flex items-center gap-2">
                     {loading ? 'Wird gesendet…' : 'Nachricht senden'}
                     <Send className="w-4 h-4" />
@@ -135,57 +136,76 @@ export default function Contact() {
             </div>
           </motion.form>
 
-          {/* Social & info */}
+          {/* Contact info & socials */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="space-y-12">
-            
-            <div className="space-y-4">
-              <p className="text-datagrey text-lg leading-relaxed" style={{ lineHeight: '1.6' }}>
-                Bereit für den nächsten Schritt? Kontaktieren Sie uns für eine
-                kostenlose Erstberatung und erfahren Sie, wie wir Ihr digitales
-                Potenzial entfalten können.
-              </p>
+            className="space-y-10"
+          >
+            <p className="text-datagrey text-lg leading-relaxed" style={{ lineHeight: '1.6' }}>
+              Bereit für den nächsten Schritt? Kontaktieren Sie uns für eine kostenlose Erstberatung – wir melden uns in der Regel am selben Tag bei Ihnen.
+            </p>
+
+            <div className="space-y-5">
               <a
-                href="mailto:info.velodigital@gmail.com"
-                className="text-neon text-lg font-medium hover:glow-text transition-all duration-500 inline-flex items-center gap-2"
-                >
-                info.velodigital@gmail.com
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="flex items-center gap-4 group"
+              >
+                <div className="w-11 h-11 rounded-xl glass flex items-center justify-center group-hover:glow-blue transition-all duration-500">
+                  <Mail className="w-5 h-5 text-neon" />
+                </div>
+                <div>
+                  <div className="text-datagrey text-xs tracking-widest uppercase">E-Mail</div>
+                  <div className="text-titanium text-base font-medium group-hover:text-neon transition-colors">{CONTACT_EMAIL}</div>
+                </div>
               </a>
+
+              <a
+                href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`}
+                className="flex items-center gap-4 group"
+              >
+                <div className="w-11 h-11 rounded-xl glass flex items-center justify-center group-hover:glow-blue transition-all duration-500">
+                  <Phone className="w-5 h-5 text-neon" />
+                </div>
+                <div>
+                  <div className="text-datagrey text-xs tracking-widest uppercase">Telefon</div>
+                  <div className="text-titanium text-base font-medium group-hover:text-neon transition-colors">{CONTACT_PHONE}</div>
+                </div>
+              </a>
+
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-xl glass flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-neon" />
+                </div>
+                <div>
+                  <div className="text-datagrey text-xs tracking-widest uppercase">Standort</div>
+                  <div className="text-titanium text-base font-medium">Konstanz, Bodensee</div>
+                </div>
+              </div>
             </div>
 
-            <div className="space-y-4">
+            {/* Social — Platzhalter, folgt später */}
+            <div className="space-y-3">
               <span className="text-datagrey text-xs tracking-widest uppercase">Folgen Sie uns</span>
-              <div className="flex gap-4">
-                {socialLinks.map((link) =>
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-14 h-14 glass rounded-xl flex items-center justify-center text-datagrey hover:text-neon hover:glow-blue hover:border-neon/30 transition-all duration-500 group"
-                  style={{ perspective: '400px' }}
-                  onMouseMove={(e) => {
-                    const rect = e.currentTarget.getBoundingClientRect();
-                    const x = (e.clientX - rect.left - rect.width / 2) / 8;
-                    const y = (e.clientY - rect.top - rect.height / 2) / 8;
-                    e.currentTarget.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'rotateY(0deg) rotateX(0deg)';
-                  }}>
-                  
-                    {link.icon}
+              <div className="flex gap-3">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    title="Folgt bald"
+                    className="w-12 h-12 rounded-xl border border-dashed border-neon/20 flex items-center justify-center text-datagrey/50 cursor-default"
+                  >
+                    {socialIcons[link.icon]}
                   </a>
-                )}
+                ))}
               </div>
+              <p className="text-datagrey/40 text-xs">Instagram &amp; TikTok folgen in Kürze.</p>
             </div>
           </motion.div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }

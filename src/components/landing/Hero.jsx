@@ -12,7 +12,7 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-32 pb-20 md:pt-40 md:pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 items-center">
-          {/* Left content — 3 cols */}
+          {/* Left content */}
           <div className="lg:col-span-3 space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -22,7 +22,7 @@ export default function Hero() {
             >
               <span className="w-1.5 h-1.5 rounded-full bg-neon animate-pulse-glow" />
               <span className="text-datagrey text-xs font-medium tracking-widest uppercase">
-                Digital Agentur · Konstanz
+                Webdesign Studio · Konstanz
               </span>
             </motion.div>
 
@@ -33,9 +33,8 @@ export default function Hero() {
               className="font-heading font-bold text-titanium leading-[0.95] tracking-[-0.04em]"
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
             >
-              Digitale Präzision für Zahnarztpraxen
-              <br />
-              <span className="text-gradient-blue">& Premium-Unternehmen.</span>
+              Professionelle Websites für Unternehmen{' '}
+              <span className="text-gradient-blue">am Bodensee.</span>
             </motion.h1>
 
             <motion.p
@@ -45,7 +44,7 @@ export default function Hero() {
               className="text-datagrey text-lg md:text-xl max-w-lg leading-relaxed"
               style={{ lineHeight: '1.6' }}
             >
-              Wir transformieren Ihren digitalen Auftritt und automatisieren Ihre Patientenakquise. Maßgeschneiderte Web-Architektur und intelligente KI-Systeme für Marktführer in der gesamten DACH-Region.
+              Wir gestalten moderne, vertrauenswürdige Websites und digitale Lösungen – damit lokale Kunden Ihr Unternehmen bei Google finden und sofort verstehen.
             </motion.p>
 
             <motion.div
@@ -55,10 +54,10 @@ export default function Hero() {
               className="flex flex-wrap gap-4"
             >
               <GlassButton href="#contact">
-                Kostenlose Potenzialanalyse sichern
+                Kostenloses Erstgespräch sichern
               </GlassButton>
-              <GlassButton href="#proof" variant="secondary">
-                Ergebnisse ansehen
+              <GlassButton href="#services" variant="secondary">
+                Leistungen ansehen
               </GlassButton>
             </motion.div>
 
@@ -68,7 +67,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.85 }}
               className="text-datagrey/60 text-xs tracking-wide"
             >
-              100% unverbindlich – keine Verpflichtung
+              Unverbindlich · Persönliche Beratung · Lokal am Bodensee
             </motion.p>
 
             {/* Trust elements */}
@@ -79,9 +78,9 @@ export default function Hero() {
               className="flex gap-12 pt-8 border-t border-border"
             >
               {[
-                { value: 'Schnelle', label: 'Umsetzung' },
-                { value: 'Individuelle', label: 'Lösungen' },
-                { value: 'Persönlicher', label: 'Support' },
+                { value: 'Lokal', label: 'Bodensee' },
+                { value: 'Persönlich', label: 'Beratung' },
+                { value: 'Schnell', label: 'Umsetzung' },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="font-heading font-bold text-2xl text-titanium">{stat.value}</div>
@@ -91,7 +90,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right image — 2 cols */}
+          {/* Right 3D visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -103,11 +102,10 @@ export default function Hero() {
               <div className="absolute inset-0 border border-neon/10 rounded-2xl z-20" />
               <img
                 src={HERO_IMAGE}
-                alt="Futuristic glass prism refracting electric blue light"
+                alt="Moderne 3D-Glasvisual als Design-Akzent"
                 className="w-full h-full object-cover animate-float"
               />
             </div>
-            {/* Glow effect behind image */}
             <div className="absolute -inset-8 bg-neon/5 rounded-3xl blur-3xl -z-10" />
           </motion.div>
         </div>

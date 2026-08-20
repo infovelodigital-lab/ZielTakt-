@@ -1,13 +1,21 @@
 import { motion } from 'framer-motion';
+import { Heart, Sparkles, Handshake, Zap } from 'lucide-react';
 import SectionDivider from './SectionDivider';
 
 const stats = [
-  { value: 'DACH', label: 'Region' },
-  { value: '24/7', label: 'KI-Support' },
-  { value: '100%', label: 'Maßgeschneidert' },
+  { value: '100%', label: 'Maßarbeit' },
+  { value: 'Bodensee', label: 'Region' },
+  { value: '1:1', label: 'Betreuung' },
 ];
 
-export default function Positioning() {
+const values = [
+  { icon: Heart, label: 'Persönlich', sub: 'Direkter Kontakt, kein Callcenter' },
+  { icon: Sparkles, label: 'Echtes Design', sub: 'Handgemacht, kein Baukasten' },
+  { icon: Handshake, label: 'Verlässlich', sub: 'Was wir versprechen, halten wir' },
+  { icon: Zap, label: 'Schnell', sub: 'Von Idee bis Launch' },
+];
+
+export default function About() {
   return (
     <section id="about" className="relative bg-void py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -30,8 +38,8 @@ export default function Positioning() {
             className="font-heading font-bold text-titanium tracking-[-0.04em] max-w-3xl"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
           >
-            Experten für den medizinischen Sektor.{' '}
-            <span className="text-gradient-blue">Offen für Exzellenz.</span>
+            Ihr lokaler Partner für{' '}
+            <span className="text-gradient-blue">digitales Handwerk.</span>
           </motion.h2>
         </div>
 
@@ -44,13 +52,13 @@ export default function Positioning() {
             className="space-y-8"
           >
             <p className="text-datagrey text-lg leading-relaxed" style={{ lineHeight: '1.7' }}>
-              Patienten und Kunden beurteilen Ihre Kompetenz in den ersten Sekunden Ihres digitalen Auftritts. Wir sind darauf spezialisiert, Zahnarztpraxen im deutschsprachigen Raum (D-A-CH) mit High-End-Websites und KI-gestützten Buchungssystemen an die Spitze zu bringen.
+              Veloxis Digital ist ein freiberufliches Design-Studio aus Konstanz. Wir arbeiten direkt und persönlich mit lokalen Unternehmen zusammen – von der ersten Idee bis zur fertigen Website.
             </p>
             <p className="text-datagrey text-lg leading-relaxed" style={{ lineHeight: '1.7' }}>
-              Während unser tiefstes Fachwissen in der Dentalbranche liegt, vertrauen auch exklusive Dienstleister und Premium-Marken auf unsere Automatisierungs-Architektur.
+              Für uns ist jede Website Maßarbeit: kein Baukasten, keine Standard-Vorlagen, sondern durchdachtes Design, das zu Ihrem Unternehmen und Ihren Kunden passt. Wir verstehen die Bodensee-Region, weil wir hier arbeiten und leben.
             </p>
 
-            <div className="flex gap-12 pt-4 border-t border-border">
+            <div className="flex flex-wrap gap-12 pt-4 border-t border-border">
               {stats.map((s) => (
                 <div key={s.label}>
                   <div className="font-heading font-bold text-2xl text-neon">{s.value}</div>
@@ -60,7 +68,6 @@ export default function Positioning() {
             </div>
           </motion.div>
 
-          {/* Trust badges */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -68,19 +75,16 @@ export default function Positioning() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 gap-4"
           >
-            {[
-              { icon: '🦷', label: 'Dentalbranche', sub: 'Tiefes Branchenwissen' },
-              { icon: '🤖', label: 'KI-Systeme', sub: 'Modernste LLM-Technologie' },
-              { icon: '🇨🇭', label: 'Swiss Precision', sub: 'Qualität auf höchstem Niveau' },
-              { icon: '⚡', label: 'Schnelle Umsetzung', sub: 'Von Idee zu Launch' },
-            ].map((item) => (
+            {values.map((item) => (
               <div
                 key={item.label}
-                className="glass-strong rounded-2xl p-6 space-y-2 hover:border-neon/20 transition-all duration-500"
+                className="glass-strong rounded-2xl p-6 space-y-3 hover:border-neon/20 transition-all duration-500"
               >
-                <div className="text-3xl">{item.icon}</div>
+                <div className="w-11 h-11 rounded-xl bg-neon/5 border border-neon/10 flex items-center justify-center">
+                  <item.icon className="w-5 h-5 text-neon" />
+                </div>
                 <div className="font-heading font-semibold text-titanium text-sm">{item.label}</div>
-                <div className="text-datagrey text-xs">{item.sub}</div>
+                <div className="text-datagrey text-xs leading-relaxed">{item.sub}</div>
               </div>
             ))}
           </motion.div>

@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Referenzen', href: '#proof' },
-  { label: 'Standort', href: '#office' },
+  { label: 'Leistungen', href: '#services' },
+  { label: 'Über uns', href: '#about' },
+  { label: 'Einzugsgebiet', href: '#area' },
   { label: 'Kontakt', href: '#contact' },
 ];
 

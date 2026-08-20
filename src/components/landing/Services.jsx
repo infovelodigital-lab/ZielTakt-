@@ -1,28 +1,49 @@
 import { motion } from 'framer-motion';
-import ServiceCard from './ServiceCard';
+import { Monitor, CalendarCheck, Workflow, Palette, ShieldCheck, Search } from 'lucide-react';
 import SectionDivider from './SectionDivider';
 
 const services = [
   {
     number: '01',
-    title: 'High-End Web-Architektur',
-    description: 'Ihre Praxis verdient mehr als eine Standard-Vorlage. Wir entwickeln blitzschnelle, visuell beeindruckende Websites, die Vertrauen ausstrahlen und Ihre Expertise perfekt in Szene setzen.',
-    features: ['Responsive Design & Mobile-First', 'UI/UX nach Schweizer Präzision', 'Performance-optimierte Architektur', 'SEO & Conversion-Optimierung'],
-    image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/59d22bf41_generated_image.png',
+    icon: Monitor,
+    title: 'Website Design',
+    description: 'Individuelle, moderne Websites, die Vertrauen wecken und Ihr Unternehmen perfekt darstellen.',
+    features: ['Responsive für alle Geräte', 'Schnelle Ladezeiten', 'Pflegeleicht & erweiterbar', 'Design nach Ihren Wünschen'],
   },
   {
     number: '02',
-    title: 'Intelligente KI-Assistenten',
-    description: 'Entlasten Sie Ihren Empfang. Unsere maßgeschneiderten KI-Chatbots beantworten Patientenfragen zu Behandlungen, Öffnungszeiten und Notfällen in Echtzeit – 24 Stunden am Tag, 7 Tage die Woche.',
-    features: ['Natürliche Sprachverarbeitung (NLP)', 'Lead-Qualifizierung automatisch', 'Nahtlose System-Integration', 'Mehrsprachiger Support'],
-    image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/ce304d02c_generated_image.png',
+    icon: CalendarCheck,
+    title: 'Online-Buchungssysteme',
+    description: 'Ihre Kunden buchen Termine rund um die Uhr – direkt über Ihre Website, ohne Telefonate.',
+    features: ['24/7 Terminbuchung', 'Automatische Bestätigung', 'Erinnerungen per E-Mail', 'An Ihre Software anbindbar'],
   },
   {
     number: '03',
-    title: 'Automatisierte Terminvergabe',
-    description: 'Von der ersten Anfrage bis zum festen Termin im Kalender. Wir verbinden Ihre Website nahtlos mit Ihren bestehenden Buchungssystemen für einen reibungslosen, automatisierten Ablauf ohne Personalaufwand.',
-    features: ['Prozessanalyse & Optimierung', 'API-Integrationen', 'Automatisierte Datenpipelines', 'Echtzeit-Monitoring & Reports'],
-    image: 'https://media.base44.com/images/public/69d37f9848f9698967903442/5e732a9f6_generated_image.png',
+    icon: Workflow,
+    title: 'Prozessautomatisierung',
+    description: 'Wir automatisieren wiederkehrende Aufgaben, damit Sie Zeit sparen und sich auf das Wesentliche konzentrieren.',
+    features: ['Weniger manuelle Schritte', 'Saubere Datenflüsse', 'Nahtlose System-Verknüpfungen', 'Mehr Zeit fürs Kerngeschäft'],
+  },
+  {
+    number: '04',
+    icon: Palette,
+    title: 'Logo & Branding Design',
+    description: 'Ein starker, wiedererkennbarer Auftritt – von Logo über Farben bis zur Schrift.',
+    features: ['Individuelles Logo-Design', 'Farb- und Schriftenwelt', 'Visueller Markenauftritt', 'Einheitlich auf allen Medien'],
+  },
+  {
+    number: '05',
+    icon: ShieldCheck,
+    title: 'SSL-Zertifikat & Website-Sicherheit',
+    description: 'Ihre Website lädt verschlüsselt und sicher – ein Vertrauenssignal für Kunden und Google.',
+    features: ['HTTPS-Verschlüsselung', 'Sichere Datenübertragung', 'Regelmäßige Sicherheits-Updates', 'Höheres Google-Ranking'],
+  },
+  {
+    number: '06',
+    icon: Search,
+    title: 'Google SEO & lokale Sichtbarkeit',
+    description: 'Damit Kunden aus der Region Sie bei Google finden – schnell und vor der Konkurrenz.',
+    features: ['Lokales Google-Ranking', 'Google-Unternehmensprofil', 'Schnelle, saubere Technik', 'Mehr Sichtbarkeit & Anfragen'],
   },
 ];
 
@@ -39,7 +60,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-neon text-xs font-medium tracking-[0.3em] uppercase"
           >
-            Unsere Expertise
+            Leistungen
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +70,7 @@ export default function Services() {
             className="font-heading font-bold text-titanium tracking-[-0.04em]"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
           >
-            Unsere Leistungen
+            Alles für Ihren digitalen Auftritt.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -58,15 +79,65 @@ export default function Services() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-datagrey text-lg max-w-2xl leading-relaxed"
           >
-            Drei Lösungen, die Ihr Unternehmen digital voranbringen: Mehr Kunden gewinnen, Prozesse automatisieren und professionell auftreten.
+            Von der ersten Skizze bis zur laufenden Website – wir kümmern uns um jedes Detail, damit Sie sich auf Ihr Geschäft konzentrieren können.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {services.map((service, i) => (
-            <ServiceCard key={service.title} {...service} index={i} />
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, i) => {
+            const Icon = service.icon;
+            return (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
+                className="glass-strong rounded-2xl p-7 space-y-5 hover:border-neon/20 transition-all duration-500 group"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="w-12 h-12 rounded-xl bg-neon/5 border border-neon/10 flex items-center justify-center group-hover:glow-blue transition-all duration-500">
+                    <Icon className="w-6 h-6 text-neon" />
+                  </div>
+                  <span className="font-heading font-bold text-titanium/15 text-3xl tracking-tight">
+                    {service.number}
+                  </span>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="font-heading font-semibold text-titanium text-xl tracking-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-datagrey text-sm leading-relaxed" style={{ lineHeight: '1.6' }}>
+                    {service.description}
+                  </p>
+                </div>
+                <ul className="space-y-2 pt-2 border-t border-border">
+                  {service.features.map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-datagrey text-xs">
+                      <span className="w-1 h-1 rounded-full bg-neon" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            );
+          })}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-14 text-center"
+        >
+          <p className="text-datagrey text-sm">
+            Nicht sicher, was Sie brauchen?{' '}
+            <a href="#contact" className="text-neon hover:underline font-medium">
+              Lassen Sie uns persönlich sprechen →
+            </a>
+          </p>
+        </motion.div>
       </div>
     </section>
   );
