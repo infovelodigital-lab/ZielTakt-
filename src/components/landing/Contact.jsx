@@ -208,8 +208,8 @@ export default function Contact() {
               <div className="flex gap-3">
                 {socialLinks.map((link) => (
                   
-                    key={link.label}
-                    <a href={link.href}
+                    <a key={link.label}
+                    href={link.href}
                     title="Folgt bald"
                     className="w-12 h-12 rounded-xl border border-dashed border-neon/20 flex items-center justify-center text-datagrey/50 cursor-default"
                   >
