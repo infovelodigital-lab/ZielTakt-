@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cookie } from 'lucide-react';
+import { Cookie, Check } from 'lucide-react';
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
@@ -38,14 +38,15 @@ export default function CookieConsent() {
             <div className="flex gap-3 flex-shrink-0">
               <button
                 onClick={() => handleChoice('declined')}
-                className="px-5 py-2.5 rounded-full text-sm font-medium text-datagrey border border-border hover:border-neon/30 hover:text-titanium transition-all duration-300"
+                className="px-5 py-3 rounded-full text-sm font-medium text-datagrey border border-border hover:border-neon/30 hover:text-titanium transition-all duration-300"
               >
                 Ablehnen
               </button>
               <button
                 onClick={() => handleChoice('accepted')}
-                className="px-5 py-2.5 rounded-full text-sm font-medium text-primary bg-neon hover:glow-blue transition-all duration-300"
+                className="px-6 py-3 rounded-full text-sm font-semibold text-void bg-neon glow-blue hover:glow-blue-strong flex items-center gap-2 transition-all duration-300"
               >
+                <Check className="w-4 h-4" strokeWidth={3} />
                 Akzeptieren
               </button>
             </div>

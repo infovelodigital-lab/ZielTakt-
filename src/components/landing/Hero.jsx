@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
 import GlassButton from './GlassButton';
 
-const HERO_IMAGE = "https://media.base44.com/images/public/69d37f9848f9698967903442/69b9a895b_generated_f1dc68dc.png";
-
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-void">
@@ -90,21 +88,41 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right 3D visual */}
+          {/* Right visual — smooth professional mockup */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-2 relative"
           >
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent z-10" />
-              <div className="absolute inset-0 border border-neon/10 rounded-2xl z-20" />
-              <img
-                src={HERO_IMAGE}
-                alt="Moderne 3D-Glasvisual als Design-Akzent"
-                className="w-full h-full object-cover animate-float"
-              />
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden glass-strong">
+              {/* Smooth layered gradients */}
+              <div className="absolute inset-0 bg-gradient-to-br from-neon/15 via-neon-dark/10 to-transparent" />
+              <div className="absolute -top-1/4 -right-1/4 w-2/3 h-2/3 rounded-full bg-neon/20 blur-3xl" />
+              <div className="absolute -bottom-1/4 -left-1/4 w-2/3 h-2/3 rounded-full bg-neon-dark/15 blur-3xl" />
+
+              {/* Floating website mockup */}
+              <div className="absolute inset-0 flex items-center justify-center p-8">
+                <div className="w-full rounded-2xl bg-charcoal/80 backdrop-blur-xl border border-neon/15 shadow-2xl animate-float overflow-hidden">
+                  <div className="flex items-center gap-1.5 px-4 py-3 border-b border-border">
+                    <span className="w-2.5 h-2.5 rounded-full bg-neon/40" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-neon/25" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-neon/15" />
+                    <span className="ml-3 h-4 flex-1 rounded-md bg-neon/5" />
+                  </div>
+                  <div className="p-5 space-y-4">
+                    <div className="h-3 w-2/3 rounded-full bg-neon/30" />
+                    <div className="h-2 w-full rounded-full bg-neon/10" />
+                    <div className="h-2 w-5/6 rounded-full bg-neon/10" />
+                    <div className="grid grid-cols-3 gap-2 pt-2">
+                      <div className="h-14 rounded-lg bg-gradient-to-br from-neon/20 to-neon-dark/10 border border-neon/10" />
+                      <div className="h-14 rounded-lg bg-gradient-to-br from-neon/15 to-transparent border border-neon/10" />
+                      <div className="h-14 rounded-lg bg-gradient-to-br from-neon-dark/15 to-transparent border border-neon/10" />
+                    </div>
+                    <div className="h-7 w-28 rounded-full bg-neon/80 glow-blue" />
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="absolute -inset-8 bg-neon/5 rounded-3xl blur-3xl -z-10" />
           </motion.div>
