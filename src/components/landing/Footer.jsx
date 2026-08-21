@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const CONTACT_EMAIL = 'info.velodigital@gmail.com';
-const CONTACT_PHONE = '+49 151 23456789';
+const CONTACT_PHONE = '+49 151 50104908';
 
 const navLinks = [
   { label: 'Leistungen', href: '#services' },
