@@ -146,6 +146,7 @@ export default function ServiceArea() {
               <div>
                 <div className="text-datagrey text-xs tracking-widest uppercase">Studio-Standort</div>
                 <div className="text-titanium text-base font-medium mt-0.5">Konstanz, Baden-Württemberg</div>
+                <div className="text-datagrey text-sm mt-1">Virtuelles Büro · persönliche Beratung nach Vereinbarung</div>
               </div>
             </div>
           </motion.div>

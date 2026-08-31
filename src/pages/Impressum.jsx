@@ -1,64 +1,59 @@
+import usePageMeta from '@/hooks/usePageMeta';
+
 export default function Impressum() {
+  usePageMeta({
+    title: 'Impressum – Vigorix Digital',
+    description:
+      'Impressum und Anbieterkennzeichnung von Vigorix Digital gemäß § 5 TMG.',
+  });
+
   return (
     <div className="bg-void min-h-screen py-32 px-6 md:px-12">
       <div className="max-w-3xl mx-auto space-y-12">
         <div className="space-y-2">
           <a href="/" className="text-neon text-sm hover:underline">← Zurück zur Startseite</a>
           <h1 className="font-heading font-bold text-titanium text-4xl tracking-tight mt-4">Impressum</h1>
-          <p className="text-datagrey text-sm">Angaben gemäß § 5 TMG / § 55 RStV</p>
+          <p className="text-datagrey text-sm">Angaben gemäß § 5 TMG</p>
         </div>
 
         {/* Platzhalter-Hinweis */}
         <div className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-5 space-y-2">
-          <p className="font-heading font-semibold text-amber-400 text-sm">⚠ Platzhalter-Text</p>
+          <p className="font-heading font-semibold text-amber-400 text-sm">⚠ Platzhalter – vor Veröffentlichung ausfüllen</p>
           <p className="text-datagrey text-sm leading-relaxed">
-            Dies ist ein Platzhalter-Impressum. Bitte vor Veröffentlichung durch geprüften, korrekten rechtlichen Text ersetzen. Die hier gezeigten Felder (Name, Anschrift, Kontakt, Kleingewerbe) müssen mit Ihren echten Daten ausgefüllt werden.
+            Die Felder in eckigen Klammern müssen durch Ihre echten Angaben ersetzt werden. Hinweis:
+            [ANSCHRIFT] muss eine real zustellbare Straße und Hausnummer sein — ein reines Postfach
+            reicht rechtlich nicht aus.
           </p>
         </div>
 
         <section className="space-y-3">
-          <h2 className="font-heading font-semibold text-titanium text-lg">Diensteanbieter / Anbieterkennzeichnung</h2>
+          <h2 className="font-heading font-semibold text-titanium text-lg">Diensteanbieter</h2>
           <div className="text-datagrey text-sm space-y-1 leading-relaxed">
-            <p className="font-medium text-titanium">[Vorname Nachname]</p>
-            <p>Veloxis Digital · Einzelunternehmen</p>
-            <p>[Straße und Hausnummer]</p>
-            <p>[PLZ Ort]</p>
+            <p className="font-medium text-titanium">[VOLLSTÄNDIGER NAME]</p>
+            <p>Vigorix Digital · Einzelunternehmen</p>
+            <p>[ANSCHRIFT]</p>
           </div>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-heading font-semibold text-titanium text-lg">Kontakt</h2>
           <div className="text-datagrey text-sm space-y-1">
-            <p>E-Mail: <a href="mailto:info.velodigital@gmail.com" className="text-neon hover:underline">info.velodigital@gmail.com</a></p>
-            <p>Telefon: <a href="tel:+4915123456789" className="text-neon hover:underline">[+49 ...]</a></p>
+            <p>Telefon: [TELEFON]</p>
+            <p>E-Mail: [E-MAIL]</p>
           </div>
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="font-heading font-semibold text-titanium text-lg">Vertretungsberechtigte Person</h2>
-          <p className="text-datagrey text-sm leading-relaxed">
-            [Vorname Nachname], Inhaber
-          </p>
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="font-heading font-semibold text-titanium text-lg">Berufsbezeichnung & berufsrechtliche Regelungen</h2>
-          <p className="text-datagrey text-sm leading-relaxed">
-            [Berufsbezeichnung, verliehen in Deutschland] – [ggf. Kammerbezeichnung]
-          </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-heading font-semibold text-titanium text-lg">Umsatzsteuer</h2>
           <p className="text-datagrey text-sm leading-relaxed">
-            Gemäß § 19 UStG wird keine Umsatzsteuer ausgewiesen (Kleinunternehmerregelung). Umsatzsteuer-Identifikationsnummer: [sofern vorhanden angeben]
+            [USt-ID ODER HINWEIS AUF §19 USTG KLEINUNTERNEHMERREGELUNG]
           </p>
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-heading font-semibold text-titanium text-lg">Registrierung / Kleingewerbe</h2>
+          <h2 className="font-heading font-semibold text-titanium text-lg">Verantwortlich für den Inhalt</h2>
           <p className="text-datagrey text-sm leading-relaxed">
-            Kleingewerbeanmeldung erfolgt beim zuständigen Gewerbeamt: [Ort]. Steuernummer: [sofern relevant]. Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: [Vorname Nachname, Anschrift wie oben].
+            Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: [VERANTWORTLICH FÜR DEN INHALT]
           </p>
         </section>
 
@@ -82,7 +77,7 @@ export default function Impressum() {
         </section>
 
         <div className="pt-8 border-t border-border">
-          <p className="text-datagrey/40 text-xs">Stand: {new Date().getFullYear()} · Veloxis Digital · Konstanz, Deutschland</p>
+          <p className="text-datagrey/40 text-xs">Stand: {new Date().getFullYear()} · Vigorix Digital · Konstanz, Deutschland</p>
         </div>
       </div>
     </div>

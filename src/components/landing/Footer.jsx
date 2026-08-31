@@ -5,8 +5,11 @@ const CONTACT_PHONE = '+49 151 50104908';
 
 const navLinks = [
   { label: 'Leistungen', href: '#services' },
+  { label: 'Preise', href: '#preise' },
+  { label: 'Projekt', href: '#projekt' },
   { label: 'Über uns', href: '#about' },
   { label: 'Einzugsgebiet', href: '#area' },
+  { label: 'Partner-Programm', href: '#partner' },
   { label: 'Kontakt', href: '#contact' },
 ];
 
@@ -55,7 +58,7 @@ export default function Footer() {
                 <span className="text-neon font-heading font-bold text-sm">V</span>
               </div>
               <span className="font-heading font-bold text-titanium text-lg tracking-tight">
-                Veloxis<span className="text-neon">.</span>
+                Vigorix<span className="text-neon">.</span>
               </span>
             </div>
             <p className="text-datagrey text-sm leading-relaxed max-w-xs">
@@ -119,7 +122,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-4">
           <span className="text-datagrey text-xs">
-            © {new Date().getFullYear()} Veloxis Digital. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Vigorix Digital. Alle Rechte vorbehalten.
           </span>
           <div className="flex gap-6">
             <a href="/datenschutz" className="text-datagrey text-xs hover:text-neon transition-colors">Datenschutz</a>

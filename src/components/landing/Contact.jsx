@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import SectionDivider from './SectionDivider';
@@ -30,9 +30,18 @@ const socialIcons = {
 };
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', betreff: '', message: '' });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const handler = (e) => {
+      const subject = e.detail?.subject;
+      if (subject) setFormData((d) => ({ ...d, betreff: subject }));
+    };
+    window.addEventListener('preset-contact', handler);
+    return () => window.removeEventListener('preset-contact', handler);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,8 +52,8 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `Neue Anfrage von ${formData.name}`,
-          from_name: 'Veloxis Digital – Kontaktformular',
+          subject: formData.betreff ? `${formData.betreff} – ${formData.name}` : `Neue Anfrage von ${formData.name}`,
+          from_name: 'Vigorix Digital – Kontaktformular',
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
@@ -55,7 +64,7 @@ export default function Contact() {
       if (result.success) {
         setSent(true);
         setTimeout(() => setSent(false), 4000);
-        setFormData({ name: '', email: '', phone: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', betreff: '', message: '' });
       }
     } catch (error) {
       console.error('Form submission error:', error);
@@ -118,6 +127,19 @@ export default function Contact() {
                 />
               </div>
             ))}
+
+            <div className="group">
+              <label className="text-datagrey text-xs tracking-widest uppercase block mb-3">
+                Betreff
+              </label>
+              <input
+                type="text"
+                value={formData.betreff}
+                onChange={(e) => setFormData({ ...formData, betreff: e.target.value })}
+                placeholder="z. B. neue Website, Partner-Anfrage …"
+                className="w-full bg-transparent border-0 border-b border-border pb-3 text-titanium text-lg placeholder:text-datagrey/40 focus:outline-none focus:border-neon transition-colors duration-500"
+              />
+            </div>
 
             <div className="group">
               <label className="text-datagrey text-xs tracking-widest uppercase block mb-3">

@@ -1,7 +1,18 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import GlassButton from './GlassButton';
 
 export default function Hero() {
+  const [tilt, setTilt] = useState({ rx: 0, ry: 0 });
+
+  const handleTilt = (e) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width - 0.5;
+    const py = (e.clientY - r.top) / r.height - 0.5;
+    setTilt({ rx: -py * 8, ry: px * 8 });
+  };
+  const resetTilt = () => setTilt({ rx: 0, ry: 0 });
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-void">
       {/* Ambient background glow */}
@@ -94,8 +105,13 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-2 relative"
+            onMouseMove={handleTilt}
+            onMouseLeave={resetTilt}
           >
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden glass-strong">
+            <div
+              className="relative aspect-[4/3] rounded-2xl overflow-hidden glass-strong transition-transform duration-300 ease-out"
+              style={{ transform: `perspective(1000px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg)` }}
+            >
               {/* Animated aurora blobs */}
               <motion.div
                 animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
@@ -127,7 +143,7 @@ export default function Hero() {
                       V
                     </div>
                     <div>
-                      <div className="text-titanium text-sm font-semibold leading-tight">Veloxis Studio</div>
+                      <div className="text-titanium text-sm font-semibold leading-tight">Vigorix Studio</div>
                       <div className="text-datagrey text-[10px]">Lokale Sichtbarkeit</div>
                     </div>
                   </div>

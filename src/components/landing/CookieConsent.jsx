@@ -6,12 +6,12 @@ export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('veloxis-cookie-consent');
+    const consent = localStorage.getItem('vigorix-cookie-consent');
     if (!consent) setVisible(true);
   }, []);
 
   const handleChoice = (choice) => {
-    localStorage.setItem('veloxis-cookie-consent', choice);
+    localStorage.setItem('vigorix-cookie-consent', choice);
     setVisible(false);
   };
 

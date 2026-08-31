@@ -22,7 +22,7 @@ const services = [
     icon: Workflow,
     title: 'Prozessautomatisierung',
     description: 'Wir automatisieren wiederkehrende Aufgaben, damit Sie Zeit sparen und sich auf das Wesentliche konzentrieren.',
-    features: ['Weniger manuelle Schritte', 'Saubere Datenflüsse', 'Nahtlose System-Verknüpfungen', 'Mehr Zeit fürs Kerngeschäft'],
+    features: ['Weniger manuelle Schritte', 'Automatische Terminbestätigung', 'Lead-Weiterleitung per WhatsApp/E-Mail', 'Mehr Zeit fürs Kerngeschäft'],
   },
   {
     number: '04',
@@ -36,14 +36,14 @@ const services = [
     icon: ShieldCheck,
     title: 'SSL-Zertifikat & Website-Sicherheit',
     description: 'Ihre Website lädt verschlüsselt und sicher – ein Vertrauenssignal für Kunden und Google.',
-    features: ['HTTPS-Verschlüsselung', 'Sichere Datenübertragung', 'Regelmäßige Sicherheits-Updates', 'Höheres Google-Ranking'],
+    features: ['HTTPS-Verschlüsselung', 'Sichere Datenübertragung', 'Regelmäßige Sicherheits-Updates', 'Automatische Backups'],
   },
   {
     number: '06',
     icon: Search,
-    title: 'Google SEO & lokale Sichtbarkeit',
-    description: 'Damit Kunden aus der Region Sie bei Google finden – schnell und vor der Konkurrenz.',
-    features: ['Lokales Google-Ranking', 'Google-Unternehmensprofil', 'Schnelle, saubere Technik', 'Mehr Sichtbarkeit & Anfragen'],
+    title: 'Google-Sichtbarkeit',
+    description: 'Damit Kunden aus der Region Sie bei Google finden.',
+    features: ['Google-Unternehmensprofil einrichten', 'Lokale SEO-Grundlagen', 'Saubere technische Basis', 'Anmeldung bei der Search Console'],
   },
 ];
 

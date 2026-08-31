@@ -1,16 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Leistungen', href: '#services' },
+  { label: 'Preise', href: '#preise' },
+  { label: 'Projekt', href: '#projekt' },
   { label: 'Über uns', href: '#about' },
   { label: 'Einzugsgebiet', href: '#area' },
+  { label: 'Partner-Programm', href: '#partner' },
   { label: 'Kontakt', href: '#contact' },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <>
@@ -18,7 +29,7 @@ export default function Navbar() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5"
+        className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 transition-all duration-500 ${scrolled ? 'glass-strong border-b border-border' : 'bg-transparent'}`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 group">
@@ -26,11 +37,11 @@ export default function Navbar() {
               <span className="text-neon font-heading font-bold text-sm">V</span>
             </div>
             <span className="font-heading font-bold text-titanium text-lg tracking-tight">
-              Veloxis<span className="text-neon">.</span>
+              Vigorix<span className="text-neon">.</span>
             </span>
           </a>
 
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
