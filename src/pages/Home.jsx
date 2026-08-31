@@ -12,16 +12,17 @@ import FAQ from '../components/landing/FAQ';
 import Contact from '../components/landing/Contact';
 import Footer from '../components/landing/Footer';
 import CookieConsent from '../components/landing/CookieConsent';
+import FloatingContact from '../components/landing/FloatingContact';
 
 export default function Home() {
   usePageMeta({
     title: 'Vigorix Digital – Webdesign Studio Konstanz am Bodensee',
     description:
-      'Vigorix Digital aus Konstanz: moderne Websites, Branding und Prozessautomatisierung für lokale Unternehmen am Bodensee. Klare Preise, persönliche Beratung.',
+    'Vigorix Digital aus Konstanz: moderne Websites, Branding und Prozessautomatisierung für lokale Unternehmen in der DACH-Region. Klare Preise, persönliche Beratung.',
   });
 
   return (
-    <div className="bg-void min-h-screen">
+    <div className="bg-void min-h-screen pb-16 md:pb-0">
       <Navbar />
       <Hero />
       <About />
@@ -35,6 +36,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <CookieConsent />
+      <FloatingContact />
     </div>
   );
 }

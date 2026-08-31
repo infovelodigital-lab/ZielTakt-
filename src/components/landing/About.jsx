@@ -4,7 +4,7 @@ import SectionDivider from './SectionDivider';
 
 const stats = [
   { value: '100%', label: 'Maßarbeit' },
-  { value: 'Bodensee', label: 'Region' },
+  { value: 'DACH', label: 'Region' },
   { value: '1:1', label: 'Betreuung' },
 ];
 
@@ -55,7 +55,7 @@ export default function About() {
               Vigorix Digital ist ein freiberufliches Design-Studio aus Konstanz. Wir arbeiten direkt und persönlich mit lokalen Unternehmen zusammen – von der ersten Idee bis zur fertigen Website.
             </p>
             <p className="text-datagrey text-lg leading-relaxed" style={{ lineHeight: '1.7' }}>
-              Für uns ist jede Website Maßarbeit: kein Baukasten, keine Standard-Vorlagen, sondern durchdachtes Design, das zu Ihrem Unternehmen und Ihren Kunden passt. Wir verstehen die Bodensee-Region, weil wir hier arbeiten und leben.
+              Für uns ist jede Website Maßarbeit: kein Baukasten, keine Standard-Vorlagen, sondern durchdachtes Design, das zu Ihrem Unternehmen und Ihren Kunden passt. Wir verstehen die Region, weil wir hier arbeiten und leben.
             </p>
 
             <div className="flex flex-wrap gap-12 pt-4 border-t border-border">

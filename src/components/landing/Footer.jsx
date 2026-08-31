@@ -62,7 +62,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-datagrey text-sm leading-relaxed max-w-xs">
-              Webdesign-Studio aus Konstanz. Moderne Websites und digitale Lösungen für lokale Unternehmen am Bodensee.
+              Webdesign-Studio aus Konstanz. Moderne Websites und digitale Lösungen für lokale Unternehmen in der Region.
             </p>
           </div>
 
@@ -92,7 +92,7 @@ export default function Footer() {
               <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="text-titanium/70 text-sm hover:text-neon transition-colors duration-300">
                 {CONTACT_PHONE}
               </a>
-              <span className="text-titanium/70 text-sm">Konstanz, Bodensee</span>
+              <span className="text-titanium/70 text-sm">Konstanz</span>
             </div>
           </div>
 

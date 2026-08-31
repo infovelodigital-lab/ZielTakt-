@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import GlassButton from './GlassButton';
+import HeroGem from './HeroGem';
 
 export default function Hero() {
   const [tilt, setTilt] = useState({ rx: 0, ry: 0 });
 
+  const canHover = typeof window !== 'undefined' && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   const handleTilt = (e) => {
+    if (!canHover) return;
     const r = e.currentTarget.getBoundingClientRect();
     const px = (e.clientX - r.left) / r.width - 0.5;
     const py = (e.clientY - r.top) / r.height - 0.5;
@@ -43,7 +46,7 @@ export default function Hero() {
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
             >
               Professionelle Websites für Unternehmen{' '}
-              <span className="text-gradient-blue">am Bodensee.</span>
+              <span className="text-gradient-blue">in der Region.</span>
             </motion.h1>
 
             <motion.p
@@ -76,7 +79,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.85 }}
               className="text-datagrey/60 text-xs tracking-wide"
             >
-              Unverbindlich · Persönliche Beratung · Lokal am Bodensee
+              Antwort in der Regel innerhalb weniger Stunden.
             </motion.p>
 
             {/* Trust elements */}
@@ -167,21 +170,13 @@ export default function Hero() {
                     </div>
                   </div>
 
-                  {/* Chart panel */}
+                  {/* 3D gem panel */}
                   <div className="glass rounded-xl p-4 flex flex-col justify-between">
-                    <div className="text-datagrey text-[10px] tracking-widest uppercase">Sichtbarkeit</div>
-                    <div className="flex items-end justify-between gap-1 flex-1 my-2">
-                      {[40, 65, 50, 80, 60, 95, 75].map((h, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ height: 0 }}
-                          animate={{ height: `${h}%` }}
-                          transition={{ duration: 0.7, delay: 0.6 + i * 0.08, ease: 'easeOut' }}
-                          className="flex-1 rounded-t-md bg-gradient-to-t from-neon-dark/40 to-neon"
-                        />
-                      ))}
+                    <div className="text-datagrey text-[10px] tracking-widest uppercase">Präzision</div>
+                    <div className="flex-1 my-2">
+                      <HeroGem />
                     </div>
-                    <div className="text-neon text-[10px] font-medium">+24% diese Woche</div>
+                    <div className="text-neon text-[10px] font-medium">Design in 3D</div>
                   </div>
                 </div>
 

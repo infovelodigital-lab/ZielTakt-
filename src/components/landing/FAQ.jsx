@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: 'Arbeitet ihr auch mit Kunden in der Schweiz?',
-    a: 'Ja. Wir sitzen in Konstanz direkt an der Grenze und betreuen Kunden in der gesamten Bodensee-Region — auch auf der Schweizer Seite. Persönliche Termine nach Vereinbarung.',
+    a: 'Ja. Wir sitzen in Konstanz direkt an der Grenze und betreuen Kunden in der gesamten Region — auch auf der Schweizer Seite. Persönliche Termine nach Vereinbarung.',
   },
 ];
 

@@ -147,3 +147,63 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 224, 255, 0.4);
 }
+
+/* ===== Mobile performance: solid backgrounds instead of blur ===== */
+@media (max-width: 768px) {
+  .glass {
+    background: rgba(14, 15, 17, 0.92);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .glass-strong {
+    background: rgba(10, 10, 12, 0.96);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* ===== Hero 3D gem (CSS-only, no WebGL) ===== */
+.hero-gem-stage {
+  perspective: 700px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-gem {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  transform-style: preserve-3d;
+  animation: gem-spin 16s linear infinite;
+  will-change: transform;
+}
+.hero-gem__face {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(0, 224, 255, 0.35);
+  backface-visibility: visible;
+}
+@keyframes gem-spin {
+  from { transform: rotateX(-22deg) rotateY(0deg); }
+  to { transform: rotateX(-22deg) rotateY(360deg); }
+}
+@keyframes gem-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.06); }
+}
+@media (max-width: 768px) {
+  .hero-gem { animation: gem-float 5s ease-in-out infinite; }
+}
+
+/* ===== Reduced motion: freeze decorative animations ===== */
+@media (prefers-reduced-motion: reduce) {
+  .hero-gem { animation: none !important; transform: rotateX(-18deg) rotateY(28deg); }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

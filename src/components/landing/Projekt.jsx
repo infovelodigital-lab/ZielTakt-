@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
 import SectionDivider from './SectionDivider';
 
 // Einziger realer Case-Study auf der gesamten Website.
 // TODO: echte Website-URL eintragen, sobald verfügbar.
-const PROJECT_URL = 'https://www.auto-kosmetik-swissline.de';
+const PROJECT_URL = 'https://autokosmetik-swissline.de';
 
 const facts = [
   'Individuelles Design',
@@ -49,30 +48,13 @@ export default function Projekt() {
             transition={{ duration: 0.8 }}
             className="relative aspect-[4/3] rounded-2xl overflow-hidden glass-strong"
           >
-            <motion.div
-              animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
-              transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-10 -left-10 w-56 h-56 rounded-full bg-neon/30 blur-3xl"
+            <img
+              src="https://media.base44.com/images/public/69d37f9848f9698967903442/a4184ef0b_Screenshot2026-08-31135747.png"
+              alt="Auto Kosmetik Swissline – Website-Screenshot"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover object-top"
             />
-            <motion.div
-              animate={{ x: [0, -30, 0], y: [0, 25, 0] }}
-              transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-10 -right-10 w-56 h-56 rounded-full bg-[#0066FF]/30 blur-3xl"
-            />
-            <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="projekt-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-                  <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#00E0FF" strokeWidth="0.5" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#projekt-grid)" />
-            </svg>
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-              <div className="w-16 h-16 rounded-2xl glass flex items-center justify-center">
-                <ExternalLink className="w-7 h-7 text-neon" />
-              </div>
-              <span className="text-datagrey text-xs tracking-widest uppercase">Screenshot folgt</span>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-void/50 via-transparent to-transparent pointer-events-none" />
           </motion.div>
 
           {/* Text */}

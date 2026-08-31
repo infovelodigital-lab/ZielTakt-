@@ -236,7 +236,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-datagrey text-xs tracking-widest uppercase">Standort</div>
-                  <div className="text-titanium text-base font-medium">Konstanz, Bodensee</div>
+                  <div className="text-titanium text-base font-medium">Konstanz</div>
                 </div>
               </div>
             </div>

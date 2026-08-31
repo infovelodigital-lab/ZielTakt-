@@ -14,14 +14,14 @@ const packages = [
   {
     name: 'Signature Site',
     price: '2.800 €',
-    time: '10–15 Tage',
+    time: '7–10 Tage',
     features: ['Bis 7 Seiten', 'Individuelles Design', 'Anfrage-/Buchungsfunktion', 'Google-Sichtbarkeit eingerichtet'],
     popular: true,
   },
   {
     name: 'Signature+ Markenpaket',
     price: '4.800 €',
-    time: '3–4 Wochen',
+    time: '2–3 Wochen',
     features: ['Individueller Umfang', 'Logo & Branding', 'Prozessautomatisierung', 'Persönliche Betreuung'],
     popular: false,
   },
@@ -108,6 +108,16 @@ export default function Preise() {
             </motion.div>
           ))}
         </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-datagrey/60 text-xs mt-6 max-w-2xl leading-relaxed"
+        >
+          Zeiträume gelten ab Freigabe aller Inhalte durch den Kunden. Bei Druckprodukten (Signature+) kommen 3–5 Werktage Versand hinzu.
+        </motion.p>
 
         {/* Laufende Betreuung */}
         <motion.div
