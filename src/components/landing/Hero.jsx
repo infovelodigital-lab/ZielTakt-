@@ -1,12 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import GlassButton from './GlassButton';
 import HeroGem from './HeroGem';
 
 export default function Hero() {
   const [tilt, setTilt] = useState({ rx: 0, ry: 0 });
+  const [canHover, setCanHover] = useState(false);
 
-  const canHover = typeof window !== 'undefined' && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  useEffect(() => {
+    try {
+      setCanHover(window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+    } catch {
+      setCanHover(false);
+    }
+  }, []);
+
   const handleTilt = (e) => {
     if (!canHover) return;
     const r = e.currentTarget.getBoundingClientRect();
