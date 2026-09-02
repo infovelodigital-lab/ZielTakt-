@@ -42,7 +42,7 @@ export default function Hero() {
             >
               <span className="w-1.5 h-1.5 rounded-full bg-neon animate-pulse-glow" />
               <span className="text-datagrey text-xs font-medium tracking-widest uppercase">
-                Webdesign Studio · Konstanz
+                Digitales Wachstumssystem · Konstanz
               </span>
             </motion.div>
 
@@ -53,8 +53,8 @@ export default function Hero() {
               className="font-heading font-bold text-titanium leading-[0.95] tracking-[-0.04em]"
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
             >
-              Professionelle Websites für Unternehmen{' '}
-              <span className="text-gradient-blue">in der Region.</span>
+              Mehr Anfragen, mehr Buchungen,{' '}
+              <span className="text-gradient-blue">weniger verpasste Kunden.</span>
             </motion.h1>
 
             <motion.p
@@ -64,7 +64,7 @@ export default function Hero() {
               className="text-datagrey text-lg md:text-xl max-w-lg leading-relaxed"
               style={{ lineHeight: '1.6' }}
             >
-              Wir gestalten moderne, vertrauenswürdige Websites und digitale Lösungen – damit lokale Kunden Ihr Unternehmen bei Google finden und sofort verstehen.
+              Ihre Website ist nur ein Baustein. Wir bauen das digitale System darum: gefunden werden, Vertrauen aufbauen, Anfragen und Buchungen gewinnen, Abläufe automatisieren – damit Kunden wiederkommen.
             </motion.p>
 
             <motion.div
@@ -98,7 +98,7 @@ export default function Hero() {
               className="flex gap-12 pt-8 border-t border-border"
             >
               {[
-                { value: 'Lokal', label: 'Bodensee' },
+                { value: 'DACH', label: 'Region' },
                 { value: 'Persönlich', label: 'Beratung' },
                 { value: 'Schnell', label: 'Umsetzung' },
               ].map((stat) => (
@@ -168,13 +168,12 @@ export default function Hero() {
                 <div className="grid grid-cols-2 gap-3 flex-1">
                   {/* Metric panel */}
                   <div className="glass rounded-xl p-4 flex flex-col justify-between">
-                    <div className="text-datagrey text-[10px] tracking-widest uppercase">PageSpeed</div>
-                    <div className="flex items-end gap-1">
-                      <span className="font-heading font-bold text-titanium text-4xl leading-none">98</span>
-                      <span className="text-datagrey text-xs mb-1">/100</span>
+                    <div className="text-datagrey text-[10px] tracking-widest uppercase">Performance</div>
+                    <div className="flex items-end">
+                      <span className="font-heading font-bold text-titanium text-3xl leading-none">Optimiert</span>
                     </div>
                     <div className="h-1.5 w-full rounded-full bg-neon/10 overflow-hidden">
-                      <div className="h-full w-[98%] rounded-full bg-gradient-to-r from-neon-dark to-neon" />
+                      <div className="h-full w-full rounded-full bg-gradient-to-r from-neon-dark to-neon" />
                     </div>
                   </div>
 
@@ -191,9 +190,9 @@ export default function Hero() {
                 {/* Bottom stat tiles */}
                 <div className="grid grid-cols-3 gap-3">
                   {[
-                    { v: '#1', l: 'Google lokal' },
                     { v: 'A+', l: 'SSL-Sicherheit' },
-                    { v: '<1s', l: 'Ladezeit' },
+                    { v: 'Schnell', l: 'Ladezeit' },
+                    { v: 'Mobil', l: 'Alle Geräte' },
                   ].map((t) => (
                     <div key={t.l} className="glass rounded-xl p-3 text-center">
                       <div className="font-heading font-bold text-neon text-lg leading-none">{t.v}</div>

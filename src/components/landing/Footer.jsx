@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const CONTACT_EMAIL = 'info.velodigital@gmail.com';
+const CONTACT_EMAIL = 'info@vigorix.de';
 const CONTACT_PHONE = '+49 151 50104908';
 
 const navLinks = [
@@ -62,7 +62,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-datagrey text-sm leading-relaxed max-w-xs">
-              Webdesign-Studio aus Konstanz. Moderne Websites und digitale Lösungen für lokale Unternehmen in der Region.
+              Digitales Wachstumssystem aus Konstanz – Website, Google-Sichtbarkeit, Online-Buchung und Automatisierung. Ein System für mehr Anfragen und Buchungen bei lokalen Unternehmen.
             </p>
           </div>
 

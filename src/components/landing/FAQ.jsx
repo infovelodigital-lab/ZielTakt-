@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: 'Was kostet es wirklich am Ende?',
-    a: 'Die Startpreise stehen bei Preisen: ab 1.400 € (Starter Site), ab 2.800 € (Signature Site), ab 4.800 € (Signature+ Markenpaket). Laufende Betreuung beginnt ab 45 € pro Monat. Nach dem Erstgespräch erhalten Sie ein Festangebot — damit gibt es keine versteckten Kosten.',
+    a: 'Die Startpreise stehen bei Preisen: ab 1.400 € (Starter Site), ab 2.800 € (Signature Site), ab 4.800 € (Signature+ Markenpaket). Laufende Betreuung beginnt ab 89 € pro Monat. Nach dem Erstgespräch erhalten Sie ein Festangebot — damit gibt es keine versteckten Kosten.',
   },
   {
     q: 'Kann ich meine Website später selbst bearbeiten?',

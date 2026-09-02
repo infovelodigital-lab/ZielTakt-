@@ -16,9 +16,9 @@ import FloatingContact from '../components/landing/FloatingContact';
 
 export default function Home() {
   usePageMeta({
-    title: 'Vigorix Digital – Webdesign Studio Konstanz am Bodensee',
+    title: 'Vigorix Digital – Digitales Wachstumssystem für lokale Unternehmen in Konstanz',
     description:
-    'Vigorix Digital aus Konstanz: moderne Websites, Branding und Prozessautomatisierung für lokale Unternehmen in der DACH-Region. Klare Preise, persönliche Beratung.',
+    'Vigorix Digital aus Konstanz: ein digitales Wachstumssystem aus Website, Google-Sichtbarkeit, Online-Buchung und Automatisierung. Mehr Anfragen, mehr Buchungen, weniger verpasste Kunden – für lokale Unternehmen in der DACH-Region.',
   });
 
   return (

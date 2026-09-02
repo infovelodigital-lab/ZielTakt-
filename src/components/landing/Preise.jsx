@@ -28,9 +28,9 @@ const packages = [
 ];
 
 const care = [
-  { name: 'Essential', price: '45 €', note: 'Updates & kleine Text-/Bildänderungen' },
-  { name: 'Growth', price: '95 €', note: 'Inhalte, SEO-Checks & Unterstützung' },
-  { name: 'Premium', price: '160 €', note: 'Pflege, Backups & neue Funktionen' },
+  { name: 'Essential', price: '89 €', note: 'Updates & kleine Text-/Bildänderungen' },
+  { name: 'Growth', price: '179 €', note: 'Inhalte, SEO-Checks & Unterstützung' },
+  { name: 'Premium', price: '349 €', note: 'Pflege, Backups & neue Funktionen' },
 ];
 
 export default function Preise() {

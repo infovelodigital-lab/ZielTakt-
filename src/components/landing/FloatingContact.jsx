@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 
-// Platzhalter — vor Go-live durch echte Daten ersetzen.
-const PHONE = '+49 151 23456789';
-const PHONE_DIGITS = '4915123456789';
-const EMAIL = 'info.velodigital@gmail.com';
+const PHONE = '+49 151 50104908';
+const PHONE_DIGITS = '4915150104908';
+const EMAIL = 'info@vigorix.de';
 
 const WhatsAppIcon = ({ className = 'w-5 h-5' }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>

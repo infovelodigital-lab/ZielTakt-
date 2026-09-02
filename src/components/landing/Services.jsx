@@ -1,49 +1,59 @@
 import { motion } from 'framer-motion';
-import { Monitor, CalendarCheck, Workflow, Palette, ShieldCheck, Search } from 'lucide-react';
+import { Search, CalendarCheck, Workflow, Palette } from 'lucide-react';
 import SectionDivider from './SectionDivider';
 
-const services = [
+const phases = [
   {
     number: '01',
-    icon: Monitor,
-    title: 'Website Design',
-    description: 'Individuelle, moderne Websites, die Vertrauen wecken und Ihr Unternehmen perfekt darstellen.',
-    features: ['Responsive für alle Geräte', 'Schnelle Ladezeiten', 'Pflegeleicht & erweiterbar', 'Design nach Ihren Wünschen'],
+    icon: Search,
+    title: 'Sichtbarkeit',
+    tagline: 'Damit man Sie findet.',
+    description: 'Ihre Website und Ihr Google-Auftritt greifen ineinander – damit Kunden aus der Region genau dann auf Sie stoßen, wenn sie suchen.',
+    features: [
+      'Individuelle Website – responsive & pflegeleicht',
+      'Google-Unternehmensprofil & lokale SEO-Grundlagen',
+      'Anmeldung bei der Google Search Console',
+      'Saubere, schnelle technische Basis',
+    ],
   },
   {
     number: '02',
     icon: CalendarCheck,
-    title: 'Online-Buchungssysteme',
-    description: 'Ihre Kunden buchen Termine rund um die Uhr – direkt über Ihre Website, ohne Telefonate.',
-    features: ['24/7 Terminbuchung', 'Automatische Bestätigung', 'Erinnerungen per E-Mail', 'An Ihre Software anbindbar'],
+    title: 'Vertrauen & Buchung',
+    tagline: 'Damit man Sie wählt.',
+    description: 'Design, das Vertrauen aufbaut – und direkte Buchung, die aus Interessenten Kunden macht.',
+    features: [
+      'Design, das Vertrauen weckt',
+      '24/7 Online-Terminbuchung',
+      'Automatische Bestätigungen & Erinnerungen',
+      'Anbindung an Ihre Software möglich',
+    ],
   },
   {
     number: '03',
     icon: Workflow,
-    title: 'Prozessautomatisierung',
-    description: 'Wir automatisieren wiederkehrende Aufgaben, damit Sie Zeit sparen und sich auf das Wesentliche konzentrieren.',
-    features: ['Weniger manuelle Schritte', 'Automatische Terminbestätigung', 'Lead-Weiterleitung per WhatsApp/E-Mail', 'Mehr Zeit fürs Kerngeschäft'],
+    title: 'Automatisierung',
+    tagline: 'Damit nichts liegen bleibt.',
+    description: 'Wiederkehrende Aufgaben laufen von allein – auch nach Feierabend und am Wochenende.',
+    features: [
+      'Prozessautomatisierung für wiederkehrende Aufgaben',
+      'Lead-Weiterleitung per WhatsApp/E-Mail',
+      'Bewertungsanfragen nach Auftragsabschluss',
+      'Rückrufservice bei verpassten Anrufen',
+    ],
   },
   {
     number: '04',
     icon: Palette,
-    title: 'Logo & Branding Design',
-    description: 'Ein starker, wiedererkennbarer Auftritt – von Logo über Farben bis zur Schrift.',
-    features: ['Individuelles Logo-Design', 'Farb- und Schriftenwelt', 'Visueller Markenauftritt', 'Einheitlich auf allen Medien'],
-  },
-  {
-    number: '05',
-    icon: ShieldCheck,
-    title: 'SSL-Zertifikat & Website-Sicherheit',
-    description: 'Ihre Website lädt verschlüsselt und sicher – ein Vertrauenssignal für Kunden und Google.',
-    features: ['HTTPS-Verschlüsselung', 'Sichere Datenübertragung', 'Regelmäßige Sicherheits-Updates', 'Automatische Backups'],
-  },
-  {
-    number: '06',
-    icon: Search,
-    title: 'Google-Sichtbarkeit',
-    description: 'Damit Kunden aus der Region Sie bei Google finden.',
-    features: ['Google-Unternehmensprofil einrichten', 'Lokale SEO-Grundlagen', 'Saubere technische Basis', 'Anmeldung bei der Search Console'],
+    title: 'Marke',
+    tagline: 'Damit man Sie wiedererkennt.',
+    description: 'Ein starker, einheitlicher Auftritt – Logo, Farben und verlässliche Sicherheit als Vertrauensbasis.',
+    features: [
+      'Individuelles Logo & Branding',
+      'Farb- und Schriftenwelt',
+      'SSL-Verschlüsselung (HTTPS) inklusive',
+      'Updates, Backups & technische Sicherheit',
+    ],
   },
 ];
 
@@ -70,7 +80,7 @@ export default function Services() {
             className="font-heading font-bold text-titanium tracking-[-0.04em]"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
           >
-            Alles für Ihren digitalen Auftritt.
+            Mehr als eine Website: <span className="text-gradient-blue">Ihr digitales System.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -79,20 +89,20 @@ export default function Services() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-datagrey text-lg max-w-2xl leading-relaxed"
           >
-            Von der ersten Skizze bis zur laufenden Website – wir kümmern uns um jedes Detail, damit Sie sich auf Ihr Geschäft konzentrieren können.
+            Die Website ist ein Baustein – entscheidend ist das Zusammenspiel: gefunden werden, Vertrauen aufbauen, Anfragen und Buchungen gewinnen, Abläufe automatisieren. Diese vier Bausteine bauen wir für Ihr Unternehmen.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, i) => {
-            const Icon = service.icon;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {phases.map((phase, i) => {
+            const Icon = phase.icon;
             return (
               <motion.div
-                key={service.title}
+                key={phase.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
+                transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
                 className="glass-strong rounded-2xl p-7 space-y-5 hover:border-neon/20 transition-all duration-500 group"
               >
                 <div className="flex items-start justify-between">
@@ -100,19 +110,22 @@ export default function Services() {
                     <Icon className="w-6 h-6 text-neon" />
                   </div>
                   <span className="font-heading font-bold text-titanium/15 text-3xl tracking-tight">
-                    {service.number}
+                    {phase.number}
                   </span>
                 </div>
                 <div className="space-y-3">
-                  <h3 className="font-heading font-semibold text-titanium text-xl tracking-tight">
-                    {service.title}
-                  </h3>
+                  <div className="flex flex-wrap items-baseline gap-x-3">
+                    <h3 className="font-heading font-semibold text-titanium text-xl tracking-tight">
+                      {phase.title}
+                    </h3>
+                    <span className="text-neon text-sm font-medium">{phase.tagline}</span>
+                  </div>
                   <p className="text-datagrey text-sm leading-relaxed" style={{ lineHeight: '1.6' }}>
-                    {service.description}
+                    {phase.description}
                   </p>
                 </div>
                 <ul className="space-y-2 pt-2 border-t border-border">
-                  {service.features.map((f) => (
+                  {phase.features.map((f) => (
                     <li key={f} className="flex items-center gap-2 text-datagrey text-xs">
                       <span className="w-1 h-1 rounded-full bg-neon" />
                       {f}
