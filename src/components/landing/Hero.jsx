@@ -63,7 +63,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.85 }}
-              className="text-datagrey/60 text-xs tracking-wide"
+              className="text-datagrey text-xs tracking-wide"
             >
               Unverbindlich · Persönliche Beratung · Lokal am Bodensee
             </motion.p>

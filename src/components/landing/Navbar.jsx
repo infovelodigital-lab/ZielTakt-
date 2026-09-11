@@ -22,7 +22,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 group">
-            <img src="/zieltakt-logo.png" alt="ZielTakt" className="h-7 md:h-8 w-auto group-hover:opacity-90 transition-opacity duration-300" />
+            <img src="/zieltakt-logo.png" alt="ZielTakt" width="1082" height="229" className="h-7 md:h-8 w-auto group-hover:opacity-90 transition-opacity duration-300" />
           </a>
 
           <div className="hidden md:flex items-center gap-10">
@@ -49,6 +49,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(true)}
+            aria-label="Menü öffnen"
             className="md:hidden text-titanium p-2"
           >
             <Menu className="w-5 h-5" />
@@ -66,6 +67,7 @@ export default function Navbar() {
           >
             <button
               onClick={() => setOpen(false)}
+              aria-label="Menü schließen"
               className="absolute top-6 right-6 text-titanium p-2"
             >
               <X className="w-6 h-6" />

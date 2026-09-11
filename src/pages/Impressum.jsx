@@ -1,6 +1,6 @@
 export default function Impressum() {
   return (
-    <div className="bg-void min-h-screen py-32 px-6 md:px-12">
+    <main className="bg-void min-h-screen py-32 px-6 md:px-12">
       <div className="max-w-3xl mx-auto space-y-12">
         <div className="space-y-2">
           <a href="/" className="text-neon text-sm hover:underline">← Zurück zur Startseite</a>
@@ -82,9 +82,9 @@ export default function Impressum() {
         </section>
 
         <div className="pt-8 border-t border-border">
-          <p className="text-datagrey/40 text-xs">Stand: {new Date().getFullYear()} · ZielTakt · Konstanz, Deutschland</p>
+          <p className="text-datagrey text-xs">Stand: {new Date().getFullYear()} · ZielTakt · Konstanz, Deutschland</p>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

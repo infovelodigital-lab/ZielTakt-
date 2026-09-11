@@ -109,7 +109,7 @@ export default function Services() {
                   <div className="w-12 h-12 rounded-xl bg-neon/5 border border-neon/10 flex items-center justify-center group-hover:glow-blue transition-all duration-500">
                     <Icon className="w-6 h-6 text-neon" />
                   </div>
-                  <span className="font-heading font-bold text-titanium/15 text-3xl tracking-tight">
+                  <span aria-hidden="true" className="font-heading font-bold text-titanium/15 text-3xl tracking-tight">
                     {phase.number}
                   </span>
                 </div>

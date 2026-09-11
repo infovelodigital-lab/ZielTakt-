@@ -114,7 +114,7 @@ export default function Preise() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-datagrey/60 text-xs mt-6 max-w-2xl leading-relaxed"
+          className="text-datagrey text-xs mt-6 max-w-2xl leading-relaxed"
         >
           Zeiträume gelten ab Freigabe aller Inhalte durch den Kunden. Bei Druckprodukten (Signature+) kommen 3–5 Werktage Versand hinzu.
         </motion.p>
@@ -161,7 +161,7 @@ export default function Preise() {
           className="mt-14 text-center space-y-4"
         >
           <GlassButton href="#contact">Individuelles Angebot auf Anfrage</GlassButton>
-          <p className="text-datagrey/60 text-xs">Alle Preise netto. Ggf. Umsatzsteuer (Kleinunternehmerregelung möglich).</p>
+          <p className="text-datagrey text-xs">Alle Preise netto. Ggf. Umsatzsteuer (Kleinunternehmerregelung möglich).</p>
         </motion.div>
       </div>
     </section>

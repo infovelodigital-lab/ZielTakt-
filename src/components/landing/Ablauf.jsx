@@ -66,7 +66,7 @@ export default function Ablauf() {
               className="glass-strong rounded-2xl p-7 space-y-4 hover:border-neon/20 transition-all duration-500 relative"
             >
               <div className="flex items-center justify-between">
-                <span className="font-heading font-bold text-titanium/15 text-3xl tracking-tight">
+                <span aria-hidden="true" className="font-heading font-bold text-titanium/15 text-3xl tracking-tight">
                   {step.n}
                 </span>
                 <span className="text-neon text-xs font-medium tracking-widest uppercase bg-neon/10 border border-neon/20 rounded-full px-3 py-1">

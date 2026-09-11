@@ -24,16 +24,18 @@ export default function Home() {
   return (
     <div className="bg-void min-h-screen pb-16 md:pb-0">
       <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Preise />
-      <Projekt />
-      <Ablauf />
-      <PartnerProgramm />
-      <ServiceArea />
-      <FAQ />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Preise />
+        <Projekt />
+        <Ablauf />
+        <PartnerProgramm />
+        <ServiceArea />
+        <FAQ />
+        <Contact />
+      </main>
       <Footer />
       <CookieConsent />
       <FloatingContact />

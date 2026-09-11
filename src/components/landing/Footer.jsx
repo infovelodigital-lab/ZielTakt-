@@ -51,7 +51,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/zieltakt-logo.png" alt="ZielTakt" className="h-7 w-auto" />
+              <img src="/zieltakt-logo.png" alt="ZielTakt" width="1082" height="229" className="h-7 w-auto" />
             </div>
             <p className="text-datagrey text-sm leading-relaxed max-w-xs">
               Webdesign-Studio aus Konstanz. Moderne Websites und digitale Lösungen für lokale Unternehmen am Bodensee.
@@ -97,13 +97,13 @@ export default function Footer() {
                   key={key}
                   href="#"
                   title="Folgt bald"
-                  className="w-11 h-11 rounded-xl border border-dashed border-neon/20 flex items-center justify-center text-datagrey/50 cursor-default"
+                  className="w-11 h-11 rounded-xl border border-dashed border-neon/20 flex items-center justify-center text-datagrey cursor-default"
                 >
                   {socialIcons[key]}
                 </a>
               ))}
             </div>
-            <p className="text-datagrey/40 text-xs">Folgt in Kürze</p>
+            <p className="text-datagrey text-xs">Folgt in Kürze</p>
             <div className="flex items-center gap-2 pt-2">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               <span className="text-titanium/60 text-xs font-mono">{time} CET · Konstanz</span>

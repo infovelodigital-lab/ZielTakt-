@@ -114,7 +114,7 @@ export default function Contact() {
                   value={formData[field.name]}
                   onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
                   placeholder={field.placeholder}
-                  className="w-full bg-transparent border-0 border-b border-border pb-3 text-titanium text-lg placeholder:text-datagrey/40 focus:outline-none focus:border-neon transition-colors duration-500"
+                  className="w-full bg-transparent border-0 border-b border-border pb-3 text-titanium text-lg placeholder:text-datagrey focus:outline-none focus:border-neon transition-colors duration-500"
                 />
               </div>
             ))}
@@ -128,7 +128,7 @@ export default function Contact() {
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 placeholder="Erzählen Sie uns von Ihrem Projekt..."
                 rows={4}
-                className="w-full bg-transparent border-0 border-b border-border pb-3 text-titanium text-lg placeholder:text-datagrey/40 focus:outline-none focus:border-neon transition-colors duration-500 resize-none"
+                className="w-full bg-transparent border-0 border-b border-border pb-3 text-titanium text-lg placeholder:text-datagrey focus:outline-none focus:border-neon transition-colors duration-500 resize-none"
               />
             </div>
 
@@ -228,13 +228,13 @@ export default function Contact() {
                     <a key={link.label}
                     href={link.href}
                     title="Folgt bald"
-                    className="w-12 h-12 rounded-xl border border-dashed border-neon/20 flex items-center justify-center text-datagrey/50 cursor-default"
+                    className="w-12 h-12 rounded-xl border border-dashed border-neon/20 flex items-center justify-center text-datagrey cursor-default"
                   >
                     {socialIcons[link.icon]}
                   </a>
                 ))}
               </div>
-              <p className="text-datagrey/40 text-xs">Instagram &amp; TikTok folgen in Kürze.</p>
+              <p className="text-datagrey text-xs">Instagram &amp; TikTok folgen in Kürze.</p>
             </div>
           </motion.div>
         </div>
