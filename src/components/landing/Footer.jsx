@@ -51,12 +51,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-neon/10 border border-neon/30 flex items-center justify-center">
-                <span className="text-neon font-heading font-bold text-sm">V</span>
-              </div>
-              <span className="font-heading font-bold text-titanium text-lg tracking-tight">
-                Veloxis<span className="text-neon">.</span>
-              </span>
+              <img src="/zieltakt-logo.png" alt="ZielTakt" className="h-7 w-auto" />
             </div>
             <p className="text-datagrey text-sm leading-relaxed max-w-xs">
               Webdesign-Studio aus Konstanz. Moderne Websites und digitale Lösungen für lokale Unternehmen am Bodensee.
@@ -119,7 +114,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-4">
           <span className="text-datagrey text-xs">
-            © {new Date().getFullYear()} Veloxis Digital. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} ZielTakt. Alle Rechte vorbehalten.
           </span>
           <div className="flex gap-6">
             <a href="/datenschutz" className="text-datagrey text-xs hover:text-neon transition-colors">Datenschutz</a>

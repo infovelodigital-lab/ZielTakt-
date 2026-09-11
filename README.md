@@ -1,3 +1,3 @@
-# Veloxis Digital
+# ZielTakt
 
-Website for Veloxis Digital — Webdesign Studio, Konstanz.
+Website for ZielTakt — Webdesign Studio, Konstanz.

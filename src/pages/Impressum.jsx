@@ -20,7 +20,7 @@ export default function Impressum() {
           <h2 className="font-heading font-semibold text-titanium text-lg">Diensteanbieter / Anbieterkennzeichnung</h2>
           <div className="text-datagrey text-sm space-y-1 leading-relaxed">
             <p className="font-medium text-titanium">[Vorname Nachname]</p>
-            <p>Veloxis Digital · Einzelunternehmen</p>
+            <p>ZielTakt · Einzelunternehmen</p>
             <p>[Straße und Hausnummer]</p>
             <p>[PLZ Ort]</p>
           </div>
@@ -82,7 +82,7 @@ export default function Impressum() {
         </section>
 
         <div className="pt-8 border-t border-border">
-          <p className="text-datagrey/40 text-xs">Stand: {new Date().getFullYear()} · Veloxis Digital · Konstanz, Deutschland</p>
+          <p className="text-datagrey/40 text-xs">Stand: {new Date().getFullYear()} · ZielTakt · Konstanz, Deutschland</p>
         </div>
       </div>
     </div>

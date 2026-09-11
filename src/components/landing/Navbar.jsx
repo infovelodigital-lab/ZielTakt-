@@ -22,12 +22,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-neon/10 border border-neon/30 flex items-center justify-center group-hover:glow-blue transition-all duration-500">
-              <span className="text-neon font-heading font-bold text-sm">V</span>
-            </div>
-            <span className="font-heading font-bold text-titanium text-lg tracking-tight">
-              Veloxis<span className="text-neon">.</span>
-            </span>
+            <img src="/zieltakt-logo.png" alt="ZielTakt" className="h-7 md:h-8 w-auto group-hover:opacity-90 transition-opacity duration-300" />
           </a>
 
           <div className="hidden md:flex items-center gap-10">

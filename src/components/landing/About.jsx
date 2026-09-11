@@ -52,7 +52,7 @@ export default function About() {
             className="space-y-8"
           >
             <p className="text-datagrey text-lg leading-relaxed" style={{ lineHeight: '1.7' }}>
-              Veloxis Digital ist ein freiberufliches Design-Studio aus Konstanz. Wir arbeiten direkt und persönlich mit lokalen Unternehmen zusammen – von der ersten Idee bis zur fertigen Website.
+              ZielTakt ist ein freiberufliches Design-Studio aus Konstanz. Wir arbeiten direkt und persönlich mit lokalen Unternehmen zusammen – von der ersten Idee bis zur fertigen Website.
             </p>
             <p className="text-datagrey text-lg leading-relaxed" style={{ lineHeight: '1.7' }}>
               Für uns ist jede Website Maßarbeit: kein Baukasten, keine Standard-Vorlagen, sondern durchdachtes Design, das zu Ihrem Unternehmen und Ihren Kunden passt. Wir verstehen die Bodensee-Region, weil wir hier arbeiten und leben.

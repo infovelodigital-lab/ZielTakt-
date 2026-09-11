@@ -44,7 +44,7 @@ export default function Contact() {
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
           subject: `Neue Anfrage von ${formData.name}`,
-          from_name: 'Veloxis Digital – Kontaktformular',
+          from_name: 'ZielTakt – Kontaktformular',
           name: formData.name,
           email: formData.email,
           phone: formData.phone,

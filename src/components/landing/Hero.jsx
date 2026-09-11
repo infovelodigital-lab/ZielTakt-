@@ -127,7 +127,7 @@ export default function Hero() {
                       V
                     </div>
                     <div>
-                      <div className="text-titanium text-sm font-semibold leading-tight">Veloxis Studio</div>
+                      <div className="text-titanium text-sm font-semibold leading-tight">ZielTakt Studio</div>
                       <div className="text-datagrey text-[10px]">Lokale Sichtbarkeit</div>
                     </div>
                   </div>

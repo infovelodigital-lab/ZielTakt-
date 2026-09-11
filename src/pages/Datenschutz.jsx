@@ -20,7 +20,7 @@ export default function Datenschutz() {
           <h2 className="font-heading font-semibold text-titanium text-lg">1. Verantwortlicher</h2>
           <div className="text-datagrey text-sm space-y-1 leading-relaxed">
             <p>[Vorname Nachname]</p>
-            <p>Veloxis Digital · Einzelunternehmen</p>
+            <p>ZielTakt · Einzelunternehmen</p>
             <p>[Straße, PLZ Ort]</p>
             <p>E-Mail: <a href="mailto:info.velodigital@gmail.com" className="text-neon hover:underline">info.velodigital@gmail.com</a></p>
             <p>Telefon: [+49 ...]</p>
@@ -85,7 +85,7 @@ export default function Datenschutz() {
         </section>
 
         <div className="pt-8 border-t border-border">
-          <p className="text-datagrey/40 text-xs">Stand: {new Date().getFullYear()} · Veloxis Digital · Konstanz, Deutschland</p>
+          <p className="text-datagrey/40 text-xs">Stand: {new Date().getFullYear()} · ZielTakt · Konstanz, Deutschland</p>
         </div>
       </div>
     </div>
