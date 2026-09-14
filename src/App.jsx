@@ -1,7 +1,4 @@
 import { Suspense, lazy } from 'react'
-import { Toaster } from "@/components/ui/toaster"
-import { QueryClientProvider } from '@tanstack/react-query'
-import { queryClientInstance } from '@/lib/query-client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { MotionConfig } from 'framer-motion';
 import PageNotFound from './lib/PageNotFound';
@@ -12,8 +9,7 @@ const Datenschutz = lazy(() => import('./pages/Datenschutz'));
 
 function App() {
   return (
-    <QueryClientProvider client={queryClientInstance}>
-      <MotionConfig reducedMotion="user">
+    <MotionConfig reducedMotion="user">
       <Router>
         <Suspense fallback={null}>
           <Routes>
@@ -24,9 +20,7 @@ function App() {
           </Routes>
         </Suspense>
       </Router>
-      </MotionConfig>
-      <Toaster />
-    </QueryClientProvider>
+    </MotionConfig>
   )
 }
 
