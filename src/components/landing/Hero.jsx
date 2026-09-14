@@ -42,7 +42,7 @@ export default function Hero() {
               className="text-datagrey text-lg md:text-xl max-w-lg leading-relaxed"
               style={{ lineHeight: '1.6' }}
             >
-              Wir gestalten moderne, vertrauenswürdige Websites und digitale Lösungen – damit lokale Kunden Ihr Unternehmen bei Google finden und sofort verstehen.
+              Wir gestalten moderne, vertrauenswürdige Websites und digitale Lösungen, damit lokale Kunden Ihr Unternehmen bei Google finden und sofort verstehen.
             </motion.p>
 
             <motion.div
@@ -88,7 +88,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right visual — compact modern dashboard */}
+          {/* Right visual: compact modern dashboard */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -196,7 +196,6 @@ export default function Hero() {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-datagrey text-xs tracking-widest uppercase">Scrollen</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}

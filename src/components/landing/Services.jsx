@@ -8,12 +8,12 @@ const phases = [
     icon: Search,
     title: 'Sichtbarkeit',
     tagline: 'Damit man Sie findet.',
-    description: 'Ihre Website und Ihr Google-Auftritt greifen ineinander – damit Kunden aus der Region genau dann auf Sie stoßen, wenn sie suchen.',
+    description: 'Ihre Website und Ihr Google-Auftritt greifen ineinander, damit Kunden aus der Region Sie genau dann finden, wenn sie suchen.',
     features: [
-      'Individuelle Website – responsive & pflegeleicht',
+      'Individuelle Website, schnell und mobil-optimiert',
       'Google-Unternehmensprofil & lokale SEO-Grundlagen',
       'Anmeldung bei der Google Search Console',
-      'Saubere, schnelle technische Basis',
+      'Saubere, technisch starke Basis',
     ],
   },
   {
@@ -21,7 +21,7 @@ const phases = [
     icon: CalendarCheck,
     title: 'Vertrauen & Buchung',
     tagline: 'Damit man Sie wählt.',
-    description: 'Design, das Vertrauen aufbaut – und direkte Buchung, die aus Interessenten Kunden macht.',
+    description: 'Design, das Vertrauen aufbaut, und eine Buchung, die aus Interessenten Kunden macht.',
     features: [
       'Design, das Vertrauen weckt',
       '24/7 Online-Terminbuchung',
@@ -34,7 +34,7 @@ const phases = [
     icon: Workflow,
     title: 'Automatisierung',
     tagline: 'Damit nichts liegen bleibt.',
-    description: 'Wiederkehrende Aufgaben laufen von allein – auch nach Feierabend und am Wochenende.',
+    description: 'Wiederkehrende Aufgaben laufen von allein, auch nach Feierabend und am Wochenende.',
     features: [
       'Prozessautomatisierung für wiederkehrende Aufgaben',
       'Lead-Weiterleitung per WhatsApp/E-Mail',
@@ -47,7 +47,7 @@ const phases = [
     icon: Palette,
     title: 'Marke',
     tagline: 'Damit man Sie wiedererkennt.',
-    description: 'Ein starker, einheitlicher Auftritt – Logo, Farben und verlässliche Sicherheit als Vertrauensbasis.',
+    description: 'Ein starker, einheitlicher Auftritt: Logo, Farben und verlässliche Sicherheit als Vertrauensbasis.',
     features: [
       'Individuelles Logo & Branding',
       'Farb- und Schriftenwelt',
@@ -89,7 +89,7 @@ export default function Services() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-datagrey text-lg max-w-2xl leading-relaxed"
           >
-            Die Website ist ein Baustein – entscheidend ist das Zusammenspiel: gefunden werden, Vertrauen aufbauen, Anfragen und Buchungen gewinnen, Abläufe automatisieren. Diese vier Bausteine bauen wir für Ihr Unternehmen.
+            Eine Website allein reicht nicht. Entscheidend ist das Zusammenspiel: gefunden werden, Vertrauen aufbauen, Anfragen und Buchungen gewinnen, Abläufe automatisieren. Genau diese vier Bausteine bauen wir für Ihr Unternehmen.
           </motion.p>
         </div>
 

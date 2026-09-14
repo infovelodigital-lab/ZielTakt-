@@ -6,7 +6,7 @@ const steps = [
     n: '01',
     title: 'Kennenlernen',
     time: 'Tag 1',
-    desc: 'Kostenloses Erstgespräch — wir klären Ihre Ziele, Ihre Kunden und was die Website leisten soll.',
+    desc: 'Kostenloses Erstgespräch. Wir klären Ihre Ziele, Ihre Kunden und was die Website leisten soll.',
   },
   {
     n: '02',

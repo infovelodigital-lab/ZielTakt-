@@ -65,7 +65,7 @@ export default function Preise() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-datagrey text-lg max-w-2xl leading-relaxed"
           >
-            Jedes Projekt ist anders — hier sind unsere Startpreise. Für alles darüber hinaus: individuelles Angebot auf Anfrage.
+            Jedes Projekt ist anders, hier sind unsere Startpreise. Für alles darüber hinaus: individuelles Angebot auf Anfrage.
           </motion.p>
         </div>
 
@@ -128,7 +128,7 @@ export default function Preise() {
           className="mt-16"
         >
           <h3 className="font-heading font-semibold text-titanium text-lg tracking-tight mb-8">
-            Laufende Betreuung — monatlich
+            Laufende Betreuung: monatlich
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {care.map((c, i) => (

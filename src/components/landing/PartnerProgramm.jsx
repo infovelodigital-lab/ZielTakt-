@@ -62,7 +62,7 @@ export default function PartnerProgramm() {
               className="text-datagrey text-lg leading-relaxed max-w-2xl mx-auto"
               style={{ lineHeight: '1.6' }}
             >
-              Fotografen, Druckereien, Berater oder einfach gute Kontakte — wer uns einen Kunden
+              Fotografen, Druckereien, Berater oder einfach gute Kontakte: Wer uns einen Kunden
               vermittelt, der abschließt, bekommt {COMMISSION_PCT} % des Projektwerts als
               Dankeschön. Keine Vertragsbindung, keine Bedingungen im Kleingedruckten.
             </motion.p>

@@ -74,7 +74,7 @@ export default function Projekt() {
               Auto Kosmetik Swissline
             </h3>
             <p className="text-datagrey text-lg leading-relaxed" style={{ lineHeight: '1.6' }}>
-              Premium-Fahrzeugaufbereitung aus Konstanz. Eine moderne Website, die Handwerk und Liebe zum Detail zeigt — von der Markenwelt über das Design bis zur direkten Buchungsanfrage.
+              Premium-Fahrzeugaufbereitung aus Konstanz. Eine moderne Website, die Handwerk und Liebe zum Detail zeigt, von der Markenwelt über das Design bis zur direkten Buchungsanfrage.
             </p>
             <ul className="flex flex-wrap gap-2 pt-2">
               {facts.map((f) => (

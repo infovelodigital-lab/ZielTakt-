@@ -6,23 +6,23 @@ import SectionDivider from './SectionDivider';
 const faqs = [
   {
     q: 'Wie lange dauert eine Website?',
-    a: 'Je nach Paket: Eine Starter Site ist nach 5–7 Tagen live, eine Signature Site nach 10–15 Tagen, das Signature+ Markenpaket nach 3–4 Wochen. Die einzelnen Schritte stehen weiter oben im Ablauf-Abschnitt — vom Erstgespräch bis zum Launch.',
+    a: 'Je nach Paket: Eine Starter Site ist nach 5–7 Tagen live, eine Signature Site nach 10–15 Tagen, das Signature+ Markenpaket nach 3–4 Wochen. Die einzelnen Schritte stehen weiter oben im Ablauf-Abschnitt, vom Erstgespräch bis zum Launch.',
   },
   {
     q: 'Was kostet es wirklich am Ende?',
-    a: 'Die Startpreise stehen bei Preisen: ab 1.400 € (Starter Site), ab 2.800 € (Signature Site), ab 4.800 € (Signature+ Markenpaket). Laufende Betreuung beginnt ab 89 € pro Monat. Nach dem Erstgespräch erhalten Sie ein Festangebot — damit gibt es keine versteckten Kosten.',
+    a: 'Die Startpreise stehen bei Preisen: ab 1.400 € (Starter Site), ab 2.800 € (Signature Site), ab 4.800 € (Signature+ Markenpaket). Laufende Betreuung beginnt ab 89 € pro Monat. Nach dem Erstgespräch erhalten Sie ein Festangebot, damit gibt es keine versteckten Kosten.',
   },
   {
     q: 'Kann ich meine Website später selbst bearbeiten?',
-    a: 'Ja. Wir bauen auf einem pflegeleichten System, damit Sie Texte, Bilder und Termine selbst ändern können. Wer es lieber abgeben möchte, wählt ein Betreuungspaket (ab 45 €/Monat) — dann übernehmen wir die Pflege für Sie.',
+    a: 'Ja. Wir bauen auf einem pflegeleichten System, damit Sie Texte, Bilder und Termine selbst ändern können. Wer es lieber abgeben möchte, wählt ein Betreuungspaket (ab 45 €/Monat), dann übernehmen wir die Pflege für Sie.',
   },
   {
     q: 'Was passiert nach dem Launch?',
-    a: 'Nach dem Launch übergeben wir die Website, zeigen Ihnen die wichtigsten Funktionen und richten die Google-Sichtbarkeit ein (Google-Unternehmensprofil, Search Console). Danach läuft die Website — wahlweise mit Betreuungspaket oder eigenständig.',
+    a: 'Nach dem Launch übergeben wir die Website, zeigen Ihnen die wichtigsten Funktionen und richten die Google-Sichtbarkeit ein (Google-Unternehmensprofil, Search Console). Danach läuft die Website weiter, wahlweise mit Betreuungspaket oder eigenständig.',
   },
   {
     q: 'Arbeitet ihr auch mit Kunden in der Schweiz?',
-    a: 'Ja. Wir sitzen in Konstanz direkt an der Grenze und betreuen Kunden in der gesamten Region — auch auf der Schweizer Seite. Persönliche Termine nach Vereinbarung.',
+    a: 'Ja. Wir sitzen in Konstanz direkt an der Grenze und betreuen Kunden in der gesamten Region, auch auf der Schweizer Seite. Persönliche Termine nach Vereinbarung.',
   },
 ];
 
