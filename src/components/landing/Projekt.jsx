@@ -49,11 +49,11 @@ export default function Projekt() {
             className="relative aspect-[4/3] rounded-2xl overflow-hidden glass-strong"
           >
             <img
-              src="https://media.base44.com/images/public/69d37f9848f9698967903442/a4184ef0b_Screenshot2026-08-31135747.png"
+              src="/case-study-swissline.jpg"
               alt="Auto Kosmetik Swissline – Website-Screenshot"
               loading="lazy"
-              width="800"
-              height="600"
+              width="1280"
+              height="720"
               className="absolute inset-0 w-full h-full object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-void/50 via-transparent to-transparent pointer-events-none" />
