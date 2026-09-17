@@ -23,7 +23,7 @@ export default function Datenschutz() {
             <p>ZielTakt · Einzelunternehmen</p>
             <p>[Straße, PLZ Ort]</p>
             <p>E-Mail: <a href="mailto:info.velodigital@gmail.com" className="text-neon hover:underline">info.velodigital@gmail.com</a></p>
-            <p>Telefon: [+49 ...]</p>
+            <p>Telefon: +49 151 50104908</p>
           </div>
         </section>
 
