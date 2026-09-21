@@ -6,12 +6,22 @@ export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('zieltakt-cookie-consent');
-    if (!consent) setVisible(true);
+    // localStorage can throw (Safari Private Browsing, "Block All Cookies",
+    // Lockdown Mode, some iOS content blockers) — never let that crash the app.
+    try {
+      const consent = localStorage.getItem('zieltakt-cookie-consent');
+      if (!consent) setVisible(true);
+    } catch {
+      setVisible(true);
+    }
   }, []);
 
   const handleChoice = (choice) => {
-    localStorage.setItem('zieltakt-cookie-consent', choice);
+    try {
+      localStorage.setItem('zieltakt-cookie-consent', choice);
+    } catch {
+      // Storage blocked — nothing to persist, just close the banner.
+    }
     setVisible(false);
   };
 

@@ -2,10 +2,22 @@ import { lazy, Suspense } from 'react';
 import usePageMeta from '@/hooks/usePageMeta';
 import Navbar from '../components/landing/Navbar';
 import Hero from '../components/landing/Hero';
+import ErrorBoundary from '../components/landing/ErrorBoundary';
 
-// Everything below the hero is one lazy chunk (see BelowFold.jsx) so it's a
-// single extra network request instead of many small ones.
-const BelowFold = lazy(() => import('./BelowFold'));
+// Below-the-fold sections: not needed for first paint, so they load in the
+// background after the hero is already visible instead of blocking it.
+const About = lazy(() => import('../components/landing/About'));
+const Services = lazy(() => import('../components/landing/Services'));
+const Preise = lazy(() => import('../components/landing/Preise'));
+const Projekt = lazy(() => import('../components/landing/Projekt'));
+const Ablauf = lazy(() => import('../components/landing/Ablauf'));
+const PartnerProgramm = lazy(() => import('../components/landing/PartnerProgramm'));
+const ServiceArea = lazy(() => import('../components/landing/ServiceArea'));
+const FAQ = lazy(() => import('../components/landing/FAQ'));
+const Contact = lazy(() => import('../components/landing/Contact'));
+const Footer = lazy(() => import('../components/landing/Footer'));
+const CookieConsent = lazy(() => import('../components/landing/CookieConsent'));
+const FloatingContact = lazy(() => import('../components/landing/FloatingContact'));
 
 export default function Home() {
   usePageMeta({
@@ -20,9 +32,25 @@ export default function Home() {
       <main>
         <Hero />
         <Suspense fallback={null}>
-          <BelowFold />
+          {/* Each section gets its own boundary: if one section has a bug on
+              some user's device, it disappears quietly instead of taking
+              every other section (and the whole page) down with it. */}
+          <ErrorBoundary><About /></ErrorBoundary>
+          <ErrorBoundary><Services /></ErrorBoundary>
+          <ErrorBoundary><Preise /></ErrorBoundary>
+          <ErrorBoundary><Projekt /></ErrorBoundary>
+          <ErrorBoundary><Ablauf /></ErrorBoundary>
+          <ErrorBoundary><PartnerProgramm /></ErrorBoundary>
+          <ErrorBoundary><ServiceArea /></ErrorBoundary>
+          <ErrorBoundary><FAQ /></ErrorBoundary>
+          <ErrorBoundary><Contact /></ErrorBoundary>
         </Suspense>
       </main>
+      <Suspense fallback={null}>
+        <ErrorBoundary><Footer /></ErrorBoundary>
+        <ErrorBoundary><CookieConsent /></ErrorBoundary>
+        <ErrorBoundary><FloatingContact /></ErrorBoundary>
+      </Suspense>
     </div>
   );
 }
