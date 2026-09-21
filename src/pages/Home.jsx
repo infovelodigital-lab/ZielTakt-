@@ -3,20 +3,9 @@ import usePageMeta from '@/hooks/usePageMeta';
 import Navbar from '../components/landing/Navbar';
 import Hero from '../components/landing/Hero';
 
-// Below-the-fold sections: not needed for first paint, so they load in the
-// background after the hero is already visible instead of blocking it.
-const About = lazy(() => import('../components/landing/About'));
-const Services = lazy(() => import('../components/landing/Services'));
-const Preise = lazy(() => import('../components/landing/Preise'));
-const Projekt = lazy(() => import('../components/landing/Projekt'));
-const Ablauf = lazy(() => import('../components/landing/Ablauf'));
-const PartnerProgramm = lazy(() => import('../components/landing/PartnerProgramm'));
-const ServiceArea = lazy(() => import('../components/landing/ServiceArea'));
-const FAQ = lazy(() => import('../components/landing/FAQ'));
-const Contact = lazy(() => import('../components/landing/Contact'));
-const Footer = lazy(() => import('../components/landing/Footer'));
-const CookieConsent = lazy(() => import('../components/landing/CookieConsent'));
-const FloatingContact = lazy(() => import('../components/landing/FloatingContact'));
+// Everything below the hero is one lazy chunk (see BelowFold.jsx) so it's a
+// single extra network request instead of many small ones.
+const BelowFold = lazy(() => import('./BelowFold'));
 
 export default function Home() {
   usePageMeta({
@@ -31,22 +20,9 @@ export default function Home() {
       <main>
         <Hero />
         <Suspense fallback={null}>
-          <About />
-          <Services />
-          <Preise />
-          <Projekt />
-          <Ablauf />
-          <PartnerProgramm />
-          <ServiceArea />
-          <FAQ />
-          <Contact />
+          <BelowFold />
         </Suspense>
       </main>
-      <Suspense fallback={null}>
-        <Footer />
-        <CookieConsent />
-        <FloatingContact />
-      </Suspense>
     </div>
   );
 }
