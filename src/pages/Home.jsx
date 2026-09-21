@@ -1,18 +1,22 @@
+import { lazy, Suspense } from 'react';
 import usePageMeta from '@/hooks/usePageMeta';
 import Navbar from '../components/landing/Navbar';
 import Hero from '../components/landing/Hero';
-import About from '../components/landing/About';
-import Services from '../components/landing/Services';
-import Preise from '../components/landing/Preise';
-import Projekt from '../components/landing/Projekt';
-import Ablauf from '../components/landing/Ablauf';
-import PartnerProgramm from '../components/landing/PartnerProgramm';
-import ServiceArea from '../components/landing/ServiceArea';
-import FAQ from '../components/landing/FAQ';
-import Contact from '../components/landing/Contact';
-import Footer from '../components/landing/Footer';
-import CookieConsent from '../components/landing/CookieConsent';
-import FloatingContact from '../components/landing/FloatingContact';
+
+// Below-the-fold sections: not needed for first paint, so they load in the
+// background after the hero is already visible instead of blocking it.
+const About = lazy(() => import('../components/landing/About'));
+const Services = lazy(() => import('../components/landing/Services'));
+const Preise = lazy(() => import('../components/landing/Preise'));
+const Projekt = lazy(() => import('../components/landing/Projekt'));
+const Ablauf = lazy(() => import('../components/landing/Ablauf'));
+const PartnerProgramm = lazy(() => import('../components/landing/PartnerProgramm'));
+const ServiceArea = lazy(() => import('../components/landing/ServiceArea'));
+const FAQ = lazy(() => import('../components/landing/FAQ'));
+const Contact = lazy(() => import('../components/landing/Contact'));
+const Footer = lazy(() => import('../components/landing/Footer'));
+const CookieConsent = lazy(() => import('../components/landing/CookieConsent'));
+const FloatingContact = lazy(() => import('../components/landing/FloatingContact'));
 
 export default function Home() {
   usePageMeta({
@@ -26,19 +30,23 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Services />
-        <Preise />
-        <Projekt />
-        <Ablauf />
-        <PartnerProgramm />
-        <ServiceArea />
-        <FAQ />
-        <Contact />
+        <Suspense fallback={null}>
+          <About />
+          <Services />
+          <Preise />
+          <Projekt />
+          <Ablauf />
+          <PartnerProgramm />
+          <ServiceArea />
+          <FAQ />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
-      <CookieConsent />
-      <FloatingContact />
+      <Suspense fallback={null}>
+        <Footer />
+        <CookieConsent />
+        <FloatingContact />
+      </Suspense>
     </div>
   );
 }
