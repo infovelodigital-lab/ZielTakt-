@@ -4,9 +4,11 @@ import GlassButton from './GlassButton';
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-void">
-      {/* Ambient background glow */}
-      <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-neon/3 blur-[200px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-neon-dark/5 blur-[150px] pointer-events-none" />
+      {/* Ambient background glow — desktop only. A large `filter: blur()`
+          radius is expensive on mobile GPUs and, unlike our backdrop-filter
+          and gem-spin rules, nothing was turning this off on phones. */}
+      <div className="hidden md:block absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-neon/3 blur-[200px] pointer-events-none" />
+      <div className="hidden md:block absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-neon-dark/5 blur-[150px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-32 pb-20 md:pt-40 md:pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 items-center">
@@ -96,16 +98,18 @@ export default function Hero() {
             className="lg:col-span-2 relative"
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden glass-strong">
-              {/* Animated aurora blobs */}
+              {/* Animated aurora blobs — lighter blur on mobile (blur-xl vs
+                  blur-3xl), full strength from md: up. Still animates on
+                  mobile, just cheaper to composite. */}
               <motion.div
                 animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
                 transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-10 -left-10 w-56 h-56 rounded-full bg-neon/40 blur-3xl"
+                className="absolute -top-10 -left-10 w-56 h-56 rounded-full bg-neon/40 blur-xl md:blur-3xl"
               />
               <motion.div
                 animate={{ x: [0, -30, 0], y: [0, 25, 0] }}
                 transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -bottom-10 -right-10 w-56 h-56 rounded-full bg-[#0066FF]/40 blur-3xl"
+                className="absolute -bottom-10 -right-10 w-56 h-56 rounded-full bg-[#0066FF]/40 blur-xl md:blur-3xl"
               />
 
               {/* Subtle grid overlay */}
@@ -184,7 +188,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="absolute -inset-8 bg-neon/10 rounded-3xl blur-3xl -z-10" />
+            <div className="absolute -inset-8 bg-neon/10 rounded-3xl blur-lg md:blur-3xl -z-10" />
           </motion.div>
         </div>
       </div>
