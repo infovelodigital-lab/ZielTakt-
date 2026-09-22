@@ -25,13 +25,13 @@ const swissTowns = [
 // position (dx/dy/anchor) so 13 close-together towns don't collide.
 const MAP_TOWNS = [
   { name: 'Konstanz', lat: 47.6603, lon: 9.1758, primary: true, country: 'DE', dx: 0, dy: -16, anchor: 'middle' },
-  { name: 'Friedrichshafen', lat: 47.6549, lon: 9.4795, country: 'DE', dx: -9, dy: 4, anchor: 'end' },
+  { name: 'Friedrichshafen', lat: 47.6549, lon: 9.4795, country: 'DE', dx: -9, dy: -8, anchor: 'end' },
   { name: 'Meersburg', lat: 47.6939, lon: 9.2716, country: 'DE', dx: 8, dy: -6, anchor: 'start' },
   { name: 'Überlingen', lat: 47.7692, lon: 9.1669, country: 'DE', dx: 0, dy: -9, anchor: 'middle' },
   { name: 'Radolfzell', lat: 47.7392, lon: 8.9686, country: 'DE', dx: -8, dy: -5, anchor: 'end' },
   { name: 'Singen', lat: 47.7594, lon: 8.8389, country: 'DE', dx: 0, dy: -9, anchor: 'middle' },
   { name: 'Stockach', lat: 47.8508, lon: 9.0087, country: 'DE', dx: 0, dy: -9, anchor: 'middle' },
-  { name: 'Kreuzlingen', lat: 47.6467, lon: 9.1747, country: 'CH', dx: 10, dy: 4, anchor: 'start' },
+  { name: 'Kreuzlingen', lat: 47.6467, lon: 9.1747, country: 'CH', dx: 10, dy: 13, anchor: 'start' },
   { name: 'Frauenfeld', lat: 47.5584, lon: 8.8969, country: 'CH', dx: 0, dy: 15, anchor: 'middle' },
   { name: 'Schaffhausen', lat: 47.6979, lon: 8.6308, country: 'CH', dx: -8, dy: 4, anchor: 'end' },
   { name: 'St. Gallen', lat: 47.4245, lon: 9.3767, country: 'CH', dx: 9, dy: 4, anchor: 'start' },

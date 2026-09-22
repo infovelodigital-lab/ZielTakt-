@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 
 const PHONE = '+49 151 50104908';
-const PHONE_DIGITS = '4915150104908';
+const PHONE_DIGITS = '4915150104908'; // for wa.me — no leading + there
+const PHONE_TEL = '+4915150104908'; // for tel: links — needs the + for correct international dialing
 const EMAIL = 'info.velodigital@gmail.com';
 
 const WhatsAppIcon = ({ className = 'w-5 h-5' }) => (
@@ -47,7 +48,7 @@ export default function FloatingContact() {
       >
         <div className="grid grid-cols-3">
           <a
-            href={`tel:${PHONE_DIGITS}`}
+            href={`tel:${PHONE_TEL}`}
             className="flex flex-col items-center justify-center gap-1 py-3 text-datagrey hover:text-neon transition-colors"
           >
             <Phone className="w-5 h-5" />
