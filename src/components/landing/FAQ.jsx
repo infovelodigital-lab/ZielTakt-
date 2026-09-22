@@ -6,7 +6,7 @@ import SectionDivider from './SectionDivider';
 const faqs = [
   {
     q: 'Wie lange dauert eine Website?',
-    a: 'Je nach Paket: Eine Starter Site ist nach 5–7 Tagen live, eine Signature Site nach 10–15 Tagen, das Signature+ Markenpaket nach 3–4 Wochen. Die einzelnen Schritte stehen weiter oben im Ablauf-Abschnitt, vom Erstgespräch bis zum Launch.',
+    a: 'Je nach Paket: Eine Starter Site ist nach 5–7 Tagen live, eine Signature Site nach 7–10 Tagen, das Signature+ Markenpaket nach 2–3 Wochen. Die einzelnen Schritte stehen weiter oben im Ablauf-Abschnitt, vom Erstgespräch bis zum Launch.',
   },
   {
     q: 'Was kostet es wirklich am Ende?',
@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: 'Kann ich meine Website später selbst bearbeiten?',
-    a: 'Ja. Wir bauen auf einem pflegeleichten System, damit Sie Texte, Bilder und Termine selbst ändern können. Wer es lieber abgeben möchte, wählt ein Betreuungspaket (ab 45 €/Monat), dann übernehmen wir die Pflege für Sie.',
+    a: 'Ja. Wir bauen auf einem pflegeleichten System, damit Sie Texte, Bilder und Termine selbst ändern können. Wer es lieber abgeben möchte, wählt ein Betreuungspaket (ab 89 €/Monat), dann übernehmen wir die Pflege für Sie.',
   },
   {
     q: 'Was passiert nach dem Launch?',
