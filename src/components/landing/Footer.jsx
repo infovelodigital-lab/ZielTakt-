@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const CONTACT_EMAIL = 'info.velodigital@gmail.com';
+const CONTACT_EMAIL = 'info@zieltakt.de';
 const CONTACT_PHONE = '+49 151 50104908';
 
 const navLinks = [

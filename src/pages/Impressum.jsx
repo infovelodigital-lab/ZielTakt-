@@ -29,8 +29,8 @@ export default function Impressum() {
         <section className="space-y-3">
           <h2 className="font-heading font-semibold text-titanium text-lg">Kontakt</h2>
           <div className="text-datagrey text-sm space-y-1">
-            <p>E-Mail: <a href="mailto:info.velodigital@gmail.com" className="text-neon hover:underline">info.velodigital@gmail.com</a></p>
-            <p>Telefon: <a href="tel:+4915150104908" className="text-neon hover:underline">+49 151 50104908</a></p>
+            <p>E-Mail: <a href="mailto:info@zieltakt.de" className="text-neon hover:underline">info@zieltakt.de</a></p>
+            <p>Telefon: <a href="tel:+4915123456789" className="text-neon hover:underline">[+49 ...]</a></p>
           </div>
         </section>
 

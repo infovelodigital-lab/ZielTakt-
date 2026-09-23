@@ -4,7 +4,7 @@ import { Phone, Mail } from 'lucide-react';
 const PHONE = '+49 151 50104908';
 const PHONE_DIGITS = '4915150104908'; // for wa.me — no leading + there
 const PHONE_TEL = '+4915150104908'; // for tel: links — needs the + for correct international dialing
-const EMAIL = 'info.velodigital@gmail.com';
+const EMAIL = 'info@zieltakt.de';
 
 const WhatsAppIcon = ({ className = 'w-5 h-5' }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>

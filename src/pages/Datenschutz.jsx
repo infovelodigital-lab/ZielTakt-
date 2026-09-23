@@ -22,8 +22,8 @@ export default function Datenschutz() {
             <p>[Vorname Nachname]</p>
             <p>ZielTakt · Einzelunternehmen</p>
             <p>[Straße, PLZ Ort]</p>
-            <p>E-Mail: <a href="mailto:info.velodigital@gmail.com" className="text-neon hover:underline">info.velodigital@gmail.com</a></p>
-            <p>Telefon: +49 151 50104908</p>
+            <p>E-Mail: <a href="mailto:info@zieltakt.de" className="text-neon hover:underline">info@zieltakt.de</a></p>
+            <p>Telefon: [+49 ...]</p>
           </div>
         </section>
 
@@ -73,7 +73,7 @@ export default function Datenschutz() {
           <h2 className="font-heading font-semibold text-titanium text-lg">8. Ihre Rechte</h2>
           <div className="text-datagrey text-sm leading-relaxed space-y-2">
             <p>Sie haben das Recht auf: Auskunft (Art. 15 DSGVO) · Berichtigung (Art. 16 DSGVO) · Löschung (Art. 17 DSGVO) · Einschränkung der Verarbeitung (Art. 18 DSGVO) · Datenübertragbarkeit (Art. 20 DSGVO) · Widerspruch (Art. 21 DSGVO).</p>
-            <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:info.velodigital@gmail.com" className="text-neon hover:underline">info.velodigital@gmail.com</a></p>
+            <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:info@zieltakt.de" className="text-neon hover:underline">info@zieltakt.de</a></p>
           </div>
         </section>
 
