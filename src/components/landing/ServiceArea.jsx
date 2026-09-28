@@ -68,7 +68,7 @@ const lakePath = LAKE_LATLON.map(([lat, lon], i) => {
 }).join(' ') + ' Z';
 
 const konstanz = MAP_TOWNS.find((t) => t.primary);
-const [kx, ky] = project(konstanz.lat, konstanz.lon);
+const [kx, ky] = project(konstanz?.lat, konstanz?.lon);
 const reachRings = [34, 58, 84];
 
 export default function ServiceArea() {

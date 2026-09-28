@@ -1,58 +1,58 @@
 import { motion } from 'framer-motion';
-import { Search, CalendarCheck, Workflow, Palette } from 'lucide-react';
+import { Globe, MapPin, CalendarCheck, BarChart3 } from 'lucide-react';
 import SectionDivider from './SectionDivider';
 
 const phases = [
   {
     number: '01',
-    icon: Search,
-    title: 'Sichtbarkeit',
-    tagline: 'Damit man Sie findet.',
-    description: 'Ihre Website und Ihr Google-Auftritt greifen ineinander, damit Kunden aus der Region Sie genau dann finden, wenn sie suchen.',
+    icon: Globe,
+    title: 'Website & Conversion',
+    tagline: 'Damit Besucher zu Kunden werden.',
+    description: 'Wir bauen Websites, die nicht nur gut aussehen, sondern Anfragen und Buchungen erzeugen.',
     features: [
-      'Individuelle Website, schnell und mobil-optimiert',
-      'Google-Unternehmensprofil & lokale SEO-Grundlagen',
-      'Anmeldung bei der Google Search Console',
-      'Saubere, technisch starke Basis',
+      'Individuelles, mobile-optimiertes Webdesign',
+      'Conversion-optimierte Seitenstruktur',
+      'Klare Call-to-Actions & Vertrauenselemente',
+      'Schnelle Ladezeiten & technische SEO-Basis',
     ],
   },
   {
     number: '02',
-    icon: CalendarCheck,
-    title: 'Vertrauen & Buchung',
-    tagline: 'Damit man Sie wählt.',
-    description: 'Design, das Vertrauen aufbaut, und eine Buchung, die aus Interessenten Kunden macht.',
+    icon: MapPin,
+    title: 'Google & Local SEO',
+    tagline: 'Damit Kunden Sie finden.',
+    description: 'Wir optimieren Ihren digitalen Auftritt für Google, Maps und lokale Suchanfragen.',
     features: [
-      'Design, das Vertrauen weckt',
-      '24/7 Online-Terminbuchung',
-      'Automatische Bestätigungen & Erinnerungen',
-      'Anbindung an Ihre Software möglich',
+      'Google-Unternehmensprofil Setup & Pflege',
+      'Lokale SEO & Keyword-Ausrichtung',
+      'Google Search Console & Indexierung',
+      'Strukturierte Daten für bessere Auffindbarkeit',
     ],
   },
   {
     number: '03',
-    icon: Workflow,
-    title: 'Automatisierung',
-    tagline: 'Damit nichts liegen bleibt.',
-    description: 'Wiederkehrende Aufgaben laufen von allein, auch nach Feierabend und am Wochenende.',
+    icon: CalendarCheck,
+    title: 'Leads & Buchungen',
+    tagline: 'Damit aus Interesse echte Anfragen werden.',
+    description: 'Wir machen es Ihren Kunden einfach, Kontakt aufzunehmen, einen Termin zu buchen oder eine Anfrage zu senden.',
     features: [
-      'Prozessautomatisierung für wiederkehrende Aufgaben',
-      'Lead-Weiterleitung per WhatsApp/E-Mail',
-      'Bewertungsanfragen nach Auftragsabschluss',
-      'Rückrufservice bei verpassten Anrufen',
+      '24/7 Online-Terminbuchung',
+      'Kontakt- & Anfrageformulare',
+      'WhatsApp-Kontakt & Click-to-Call',
+      'Automatische Bestätigungen & Erinnerungen',
     ],
   },
   {
     number: '04',
-    icon: Palette,
-    title: 'Marke',
-    tagline: 'Damit man Sie wiedererkennt.',
-    description: 'Ein starker, einheitlicher Auftritt: Logo, Farben und verlässliche Sicherheit als Vertrauensbasis.',
+    icon: BarChart3,
+    title: 'Tracking & Growth',
+    tagline: 'Damit Sie wissen, was wirklich funktioniert.',
+    description: 'Wir machen sichtbar, woher Ihre Kunden kommen und welche Maßnahmen tatsächlich Anfragen bringen.',
     features: [
-      'Individuelles Logo & Branding',
-      'Farb- und Schriftenwelt',
-      'SSL-Verschlüsselung (HTTPS) inklusive',
-      'Updates, Backups & technische Sicherheit',
+      'Google Analytics & Search Console',
+      'Conversion- & Formular-Tracking',
+      'Performance Monitoring',
+      'Reporting je nach Betreuungspaket',
     ],
   },
 ];
@@ -80,7 +80,7 @@ export default function Services() {
             className="font-heading font-bold text-titanium tracking-[-0.04em]"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
           >
-            Mehr als eine Website: <span className="text-gradient-blue">Ihr digitales System.</span>
+            Mehr als eine Website: <span className="text-gradient-blue">Ein System für mehr Kunden.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -89,7 +89,7 @@ export default function Services() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-datagrey text-lg max-w-2xl leading-relaxed"
           >
-            Eine Website allein reicht nicht. Entscheidend ist das Zusammenspiel: gefunden werden, Vertrauen aufbauen, Anfragen und Buchungen gewinnen, Abläufe automatisieren. Genau diese vier Bausteine bauen wir für Ihr Unternehmen.
+            Wir verbinden Website, Google-Sichtbarkeit, Leads, Buchungen und Tracking zu einem System, das Ihr Unternehmen digital wachsen lässt.
           </motion.p>
         </div>
 

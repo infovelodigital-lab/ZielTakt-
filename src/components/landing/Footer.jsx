@@ -54,7 +54,7 @@ export default function Footer() {
               <img src="/zieltakt-logo.png" alt="ZielTakt" width="1082" height="229" className="h-7 w-auto" />
             </div>
             <p className="text-datagrey text-sm leading-relaxed max-w-xs">
-              Webdesign-Studio aus Konstanz. Moderne Websites und digitale Lösungen für lokale Unternehmen am Bodensee.
+              Digitale Growth-Systeme für lokale Unternehmen am Bodensee: Website, Sichtbarkeit, Anfragen und Wachstum aus einer Hand.
             </p>
           </div>
 

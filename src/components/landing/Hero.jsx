@@ -22,7 +22,7 @@ export default function Hero() {
             >
               <span className="w-1.5 h-1.5 rounded-full bg-neon animate-pulse-glow" />
               <span className="text-datagrey text-xs font-medium tracking-widest uppercase">
-                Webdesign Studio · Konstanz
+                Growth Systems · Konstanz
               </span>
             </motion.div>
 

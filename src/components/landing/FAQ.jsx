@@ -6,15 +6,15 @@ import SectionDivider from './SectionDivider';
 const faqs = [
   {
     q: 'Wie lange dauert eine Website?',
-    a: 'Je nach Paket: Eine Starter Site ist nach 5–7 Tagen live, eine Signature Site nach 7–10 Tagen, das Signature+ Markenpaket nach 2–3 Wochen. Die einzelnen Schritte stehen weiter oben im Ablauf-Abschnitt, vom Erstgespräch bis zum Launch.',
+    a: 'Je nach Paket: Eine Starter Site ist nach 5–7 Tagen live, eine Growth Website nach 7–14 Werktagen, Growth Pro nach 2–4 Wochen. Die einzelnen Schritte stehen weiter oben im Ablauf-Abschnitt, vom Erstgespräch bis zum Launch.',
   },
   {
     q: 'Was kostet es wirklich am Ende?',
-    a: 'Die Startpreise stehen bei Preisen: ab 1.400 € (Starter Site), ab 2.800 € (Signature Site), ab 4.800 € (Signature+ Markenpaket). Laufende Betreuung beginnt ab 89 € pro Monat. Nach dem Erstgespräch erhalten Sie ein Festangebot, damit gibt es keine versteckten Kosten.',
+    a: 'Die Startpreise stehen bei Preisen: ab 1.590 € (Starter Site), ab 2.990 € (Growth Website), ab 4.990 € (Growth Pro). Automatisierungen sind separat buchbar, laufendes Wachstum beginnt ab 99 € pro Monat. Nach dem Erstgespräch erhalten Sie ein Festangebot, damit gibt es keine versteckten Kosten.',
   },
   {
     q: 'Kann ich meine Website später selbst bearbeiten?',
-    a: 'Ja. Wir bauen auf einem pflegeleichten System, damit Sie Texte, Bilder und Termine selbst ändern können. Wer es lieber abgeben möchte, wählt ein Betreuungspaket (ab 89 €/Monat), dann übernehmen wir die Pflege für Sie.',
+    a: 'Ja. Wir bauen auf einem pflegeleichten System, damit Sie Texte, Bilder und Termine selbst ändern können. Wer es lieber abgeben möchte, wählt ein Betreuungspaket (ab 99 €/Monat), dann übernehmen wir die Pflege für Sie.',
   },
   {
     q: 'Was passiert nach dem Launch?',
