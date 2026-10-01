@@ -5,7 +5,7 @@ import SectionDivider from './SectionDivider';
 import GlassButton from './GlassButton';
 
 const CONTACT_EMAIL = 'info@zieltakt.de';
-const CONTACT_PHONE = '+49 151 50104908';
+const CONTACT_PHONE = '+41 77 277 41 49';
 const WEB3FORMS_ACCESS_KEY = 'b120e0f3-17e8-4071-b046-227eda749ae6';
  
 // Platzhalter für spätere Social-Media-Links (Instagram, TikTok)

@@ -30,7 +30,7 @@ export default function Impressum() {
           <h2 className="font-heading font-semibold text-titanium text-lg">Kontakt</h2>
           <div className="text-datagrey text-sm space-y-1">
             <p>E-Mail: <a href="mailto:info@zieltakt.de" className="text-neon hover:underline">info@zieltakt.de</a></p>
-            <p>Telefon: <a href="tel:+4915123456789" className="text-neon hover:underline">[+49 ...]</a></p>
+            <p>Telefon: <a href="tel:+4915123456789 / +41 77 277 41 49" className="text-neon hover:underline">[+49 ...]</a></p>
           </div>
         </section>
 
