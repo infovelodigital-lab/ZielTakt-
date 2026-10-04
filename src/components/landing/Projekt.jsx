@@ -14,7 +14,7 @@ const facts = [
 
 export default function Projekt() {
   return (
-    <section id="projekt" className="relative bg-void py-32">
+    <section id="projekt" className="relative bg-void py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionDivider />
 

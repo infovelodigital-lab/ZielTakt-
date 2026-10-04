@@ -73,7 +73,7 @@ const reachRings = [34, 58, 84];
 
 export default function ServiceArea() {
   return (
-    <section id="area" className="relative bg-void py-32">
+    <section id="area" className="relative bg-void py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionDivider />
 

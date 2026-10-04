@@ -70,12 +70,12 @@ export default function Hero() {
               Unverbindlich · Persönliche Beratung · Lokal am Bodensee
             </motion.p>
 
-            {/* Trust elements */}
+                        {/* Trust elements */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
-              className="flex gap-12 pt-8 border-t border-border"
+              className="grid grid-cols-3 gap-4 sm:flex sm:gap-12 pt-8 border-t border-border"
             >
               {[
                 { value: 'Lokal', label: 'Bodensee' },
@@ -83,8 +83,8 @@ export default function Hero() {
                 { value: 'Schnell', label: 'Umsetzung' },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <div className="font-heading font-bold text-2xl text-titanium">{stat.value}</div>
-                  <div className="text-datagrey text-xs tracking-widest uppercase mt-1">{stat.label}</div>
+                  <div className="font-heading font-bold text-lg sm:text-2xl text-titanium">{stat.value}</div>
+                  <div className="text-datagrey text-[10px] sm:text-xs tracking-wider sm:tracking-widest uppercase mt-1">{stat.label}</div>
                 </div>
               ))}
             </motion.div>

@@ -27,7 +27,7 @@ export default function Home() {
   });
 
   return (
-    <div className="bg-void min-h-screen pb-16 md:pb-0">
+    <div className="bg-void min-h-screen pb-16 md:pb-0 overflow-x-clip">
       <Navbar />
       <main>
         <Hero />

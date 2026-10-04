@@ -14,7 +14,7 @@ export default function PartnerProgramm() {
   };
 
   return (
-    <section id="partner" className="relative bg-void py-32">
+    <section id="partner" className="relative bg-void py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionDivider />
 
