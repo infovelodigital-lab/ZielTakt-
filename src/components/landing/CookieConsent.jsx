@@ -41,7 +41,7 @@ export default function CookieConsent() {
                 <Cookie className="w-5 h-5 text-neon" />
               </div>
               <p className="text-datagrey text-sm leading-relaxed">
-                Diese Website verwendet ausschließlich technisch notwendige Cookies, damit alles reibungslos funktioniert. Es erfolgt kein Tracking. Mehr dazu in der{' '}
+                Diese Website verwendet keine Tracking- oder Werbe-Cookies. Lediglich Ihre Auswahl hier wird lokal in Ihrem Browser gespeichert. Mehr dazu in der{' '}
                 <a href="/datenschutz" className="text-neon hover:underline">Datenschutzerklärung</a>.
               </p>
             </div>

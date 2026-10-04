@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 
-const PHONE = '+49 151 50104908';
-const PHONE_DIGITS = '4915150104908'; // for wa.me — no leading + there
-const PHONE_TEL = '+4915150104908'; // for tel: links — needs the + for correct international dialing
+const PHONE_DIGITS = '41772774149'; // +41 77 277 41 49 for wa.me — no leading + there
+const PHONE_TEL = '+41772774149'; // for tel: links — needs the + for correct international dialing
 const EMAIL = 'info@zieltakt.de';
 
 const WhatsAppIcon = ({ className = 'w-5 h-5' }) => (

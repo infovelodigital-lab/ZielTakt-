@@ -1,4 +1,12 @@
+import usePageMeta from '@/hooks/usePageMeta';
+
 export default function Datenschutz() {
+  usePageMeta({
+    title: 'Datenschutzerklärung – ZielTakt',
+    description: 'Datenschutzerklärung von ZielTakt: welche Daten wir erheben, wofür und welche Rechte Sie haben.',
+    path: '/datenschutz',
+  });
+
   return (
     <main className="bg-void min-h-screen py-32 px-6 md:px-12">
       <div className="max-w-3xl mx-auto space-y-12">
@@ -23,22 +31,29 @@ export default function Datenschutz() {
             <p>ZielTakt · Einzelunternehmen</p>
             <p>[Straße, PLZ Ort]</p>
             <p>E-Mail: <a href="mailto:info@zieltakt.de" className="text-neon hover:underline">info@zieltakt.de</a></p>
-            <p>Telefon: [+49 ...]</p>
+            <p>Telefon: <a href="tel:+41772774149" className="text-neon hover:underline">+41 77 277 41 49</a></p>
           </div>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-heading font-semibold text-titanium text-lg">2. Erhebung und Verarbeitung personenbezogener Daten</h2>
           <p className="text-datagrey text-sm leading-relaxed">
-            Wir erheben personenbezogene Daten, wenn Sie uns diese im Rahmen einer Anfrage über unser Kontaktformular, per E-Mail oder telefonisch mitteilen. Diese Daten (z. B. Name, E-Mail-Adresse, Telefonnummer, Nachrichteninhalt) werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.
+            Wir erheben personenbezogene Daten, wenn Sie uns diese im Rahmen einer Anfrage über unser Kontaktformular, per E-Mail, WhatsApp oder telefonisch mitteilen. Diese Daten (z. B. Name, E-Mail-Adresse, Telefonnummer, Nachrichteninhalt) werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Eine Weitergabe an Dritte erfolgt nur, soweit dies für die technische Übermittlung erforderlich ist (siehe Abschnitt 3 und 7), und nicht zu Werbezwecken.
           </p>
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-heading font-semibold text-titanium text-lg">3. Kontaktformular</h2>
-          <p className="text-datagrey text-sm leading-relaxed">
-            Wenn Sie uns über das Kontaktformular eine Nachricht senden, werden Ihre Angaben aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage gespeichert. Eine Weitergabe dieser Daten erfolgt nicht. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).
-          </p>
+          <h2 className="font-heading font-semibold text-titanium text-lg">3. Kontaktformular (Web3Forms)</h2>
+          <div className="text-datagrey text-sm leading-relaxed space-y-3">
+            <p>
+              Wenn Sie uns über das Kontaktformular eine Nachricht senden, werden Ihre Angaben (Name, E-Mail-Adresse, optional Telefonnummer, Nachricht) zwecks Bearbeitung der Anfrage verarbeitet. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).
+            </p>
+            <p>
+              Für die technische Übermittlung der Formulardaten per E-Mail nutzen wir den Dienst Web3Forms (
+              <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer" className="text-neon hover:underline">web3forms.com</a>
+              ). Ihre Eingaben werden dabei an die Server von Web3Forms übertragen und von dort an uns weitergeleitet. [Anbieter, Anschrift, Serverstandort und ggf. Auftragsverarbeitungsvertrag laut Web3Forms-Datenschutzerklärung ergänzen.]
+            </p>
+          </div>
         </section>
 
         <section className="space-y-3">
@@ -56,9 +71,9 @@ export default function Datenschutz() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-heading font-semibold text-titanium text-lg">6. Cookies</h2>
+          <h2 className="font-heading font-semibold text-titanium text-lg">6. Cookies und lokale Speicherung</h2>
           <p className="text-datagrey text-sm leading-relaxed">
-            Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Seite erforderlich sind. Es erfolgt kein Tracking, keine Analyse-Tools und keine Werbe-Cookies Dritter. Über unseren Cookie-Hinweis können Sie die Nutzung technisch notwendiger Cookies akzeptieren oder ablehnen.
+            Diese Website setzt keine Tracking-, Analyse- oder Werbe-Cookies. Lediglich Ihre Auswahl im Hinweisbanner wird lokal in Ihrem Browser (localStorage) gespeichert, damit der Hinweis nicht bei jedem Besuch erneut erscheint. Diese Information wird nicht an uns übertragen und kann jederzeit über die Browsereinstellungen gelöscht werden.
           </p>
         </section>
 
@@ -70,7 +85,21 @@ export default function Datenschutz() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-heading font-semibold text-titanium text-lg">8. Ihre Rechte</h2>
+          <h2 className="font-heading font-semibold text-titanium text-lg">8. Schriftarten</h2>
+          <p className="text-datagrey text-sm leading-relaxed">
+            Die auf dieser Website verwendeten Schriftarten werden lokal von unserem eigenen Server ausgeliefert. Es findet keine Verbindung zu Servern von Google oder anderen Drittanbietern statt.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="font-heading font-semibold text-titanium text-lg">9. Links zu WhatsApp und Instagram</h2>
+          <p className="text-datagrey text-sm leading-relaxed">
+            Unsere Website enthält Links zu WhatsApp und Instagram (beide Meta Platforms Ireland Ltd.). Es handelt sich um einfache Links – Daten werden erst übertragen, wenn Sie einen dieser Links anklicken. Ab dann gelten die Datenschutzbestimmungen des jeweiligen Anbieters.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="font-heading font-semibold text-titanium text-lg">10. Ihre Rechte</h2>
           <div className="text-datagrey text-sm leading-relaxed space-y-2">
             <p>Sie haben das Recht auf: Auskunft (Art. 15 DSGVO) · Berichtigung (Art. 16 DSGVO) · Löschung (Art. 17 DSGVO) · Einschränkung der Verarbeitung (Art. 18 DSGVO) · Datenübertragbarkeit (Art. 20 DSGVO) · Widerspruch (Art. 21 DSGVO).</p>
             <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:info@zieltakt.de" className="text-neon hover:underline">info@zieltakt.de</a></p>
@@ -78,7 +107,7 @@ export default function Datenschutz() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-heading font-semibold text-titanium text-lg">9. Beschwerderecht</h2>
+          <h2 className="font-heading font-semibold text-titanium text-lg">11. Beschwerderecht</h2>
           <p className="text-datagrey text-sm leading-relaxed">
             Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist in der Regel der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg (LfDI BW).
           </p>

@@ -128,7 +128,7 @@ export default function Hero() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-neon to-neon-dark flex items-center justify-center font-heading font-bold text-void text-sm">
-                      V
+                      Z
                     </div>
                     <div>
                       <div className="text-titanium text-sm font-semibold leading-tight">ZielTakt Studio</div>

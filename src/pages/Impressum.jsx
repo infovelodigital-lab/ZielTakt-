@@ -1,11 +1,19 @@
+import usePageMeta from '@/hooks/usePageMeta';
+
 export default function Impressum() {
+  usePageMeta({
+    title: 'Impressum – ZielTakt',
+    description: 'Impressum und Anbieterkennzeichnung von ZielTakt, Webdesign Studio in Konstanz.',
+    path: '/impressum',
+  });
+
   return (
     <main className="bg-void min-h-screen py-32 px-6 md:px-12">
       <div className="max-w-3xl mx-auto space-y-12">
         <div className="space-y-2">
           <a href="/" className="text-neon text-sm hover:underline">← Zurück zur Startseite</a>
           <h1 className="font-heading font-bold text-titanium text-4xl tracking-tight mt-4">Impressum</h1>
-          <p className="text-datagrey text-sm">Angaben gemäß § 5 TMG / § 55 RStV</p>
+          <p className="text-datagrey text-sm">Angaben gemäß § 5 DDG</p>
         </div>
 
         {/* Platzhalter-Hinweis */}
@@ -30,7 +38,7 @@ export default function Impressum() {
           <h2 className="font-heading font-semibold text-titanium text-lg">Kontakt</h2>
           <div className="text-datagrey text-sm space-y-1">
             <p>E-Mail: <a href="mailto:info@zieltakt.de" className="text-neon hover:underline">info@zieltakt.de</a></p>
-            <p>Telefon: <a href="tel:+4915123456789 / +41 77 277 41 49" className="text-neon hover:underline">[+49 ...]</a></p>
+            <p>Telefon: <a href="tel:+41772774149" className="text-neon hover:underline">+41 77 277 41 49</a></p>
           </div>
         </section>
 
@@ -42,9 +50,9 @@ export default function Impressum() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-heading font-semibold text-titanium text-lg">Berufsbezeichnung & berufsrechtliche Regelungen</h2>
+          <h2 className="font-heading font-semibold text-titanium text-lg">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
           <p className="text-datagrey text-sm leading-relaxed">
-            [Berufsbezeichnung, verliehen in Deutschland] – [ggf. Kammerbezeichnung]
+            [Vorname Nachname], Anschrift wie oben
           </p>
         </section>
 
@@ -58,7 +66,7 @@ export default function Impressum() {
         <section className="space-y-3">
           <h2 className="font-heading font-semibold text-titanium text-lg">Registrierung / Kleingewerbe</h2>
           <p className="text-datagrey text-sm leading-relaxed">
-            Kleingewerbeanmeldung erfolgt beim zuständigen Gewerbeamt: [Ort]. Steuernummer: [sofern relevant]. Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: [Vorname Nachname, Anschrift wie oben].
+            Kleingewerbeanmeldung erfolgt beim zuständigen Gewerbeamt: [Ort]. Steuernummer: [sofern relevant].
           </p>
         </section>
 
@@ -72,12 +80,9 @@ export default function Impressum() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-heading font-semibold text-titanium text-lg">Online-Streitbeilegung</h2>
+          <h2 className="font-heading font-semibold text-titanium text-lg">Verbraucherstreitbeilegung</h2>
           <p className="text-datagrey text-sm leading-relaxed">
-            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
-            <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-neon hover:underline">
-              https://ec.europa.eu/consumers/odr
-            </a>. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+            Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
           </p>
         </section>
 

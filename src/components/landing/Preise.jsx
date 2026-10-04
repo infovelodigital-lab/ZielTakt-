@@ -135,7 +135,7 @@ export default function Preise() {
           transition={{ duration: 0.5 }}
           className="text-datagrey text-xs mt-6 max-w-2xl leading-relaxed"
         >
-          Zeiträume gelten ab Freigabe aller Inhalte durch den Kunden. Bei Druckprodukten (Growth Pro) kommen 3–5 Werktage Versand hinzu.
+          Zeiträume gelten ab Freigabe aller Inhalte durch den Kunden. Bei optionalen Druckprodukten kommen 3–5 Werktage Versand hinzu.
         </motion.p>
 
         {/* Automation & AI */}

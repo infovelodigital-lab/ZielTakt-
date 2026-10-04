@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import SectionDivider from './SectionDivider';
@@ -8,10 +8,9 @@ const CONTACT_EMAIL = 'info@zieltakt.de';
 const CONTACT_PHONE = '+41 77 277 41 49';
 const WEB3FORMS_ACCESS_KEY = 'b120e0f3-17e8-4071-b046-227eda749ae6';
  
-// Platzhalter für spätere Social-Media-Links (Instagram, TikTok)
+// TikTok wird wieder ergänzt, sobald der Account-Link feststeht.
 const socialLinks = [
-  { label: 'Instagram', icon: 'instagram', href: 'https://www.instagram.com/zieltakt?stkn=amR3cDkxZTlrZG01&utm_source=qr' },
-  { label: 'TikTok', icon: 'tiktok', href: '#' },
+  { label: 'Instagram', icon: 'instagram', href: 'https://www.instagram.com/zieltakt' },
 ];
 
 
@@ -33,33 +32,41 @@ const socialIcons = {
       <circle cx="16.3" cy="7.7" r="1" fill="#fff" />
     </svg>
   ),
-      tiktok: (
-    <svg viewBox="0 0 24 24" className="w-7 h-7">
-      <rect width="24" height="24" rx="6" fill="#000" />
-      <g transform="translate(4.5 4.5) scale(0.625)">
-        <path fill="#25F4EE" transform="translate(-0.6 -0.6)" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-        <path fill="#FE2C55" transform="translate(0.6 0.6)" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-        <path fill="#FFFFFF" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-      </g>
-    </svg>
-  ),
 };
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [subject, setSubject] = useState('');
+
+  // "Partner werden" (PartnerProgramm) presets the request type.
+  useEffect(() => {
+    const onPreset = (e) => {
+      const presetSubject = e.detail?.subject;
+      if (!presetSubject) return;
+      setSubject(presetSubject);
+      setFormData((prev) =>
+        prev.message ? prev : { ...prev, message: `${presetSubject}: ` }
+      );
+    };
+    window.addEventListener('preset-contact', onPreset);
+    return () => window.removeEventListener('preset-contact', onPreset);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (loading) return;
     setLoading(true);
+    setError(false);
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `Neue Anfrage von ${formData.name}`,
+          subject: `${subject || 'Neue Anfrage'} von ${formData.name}`,
           from_name: 'ZielTakt – Kontaktformular',
           name: formData.name,
           email: formData.email,
@@ -72,9 +79,13 @@ export default function Contact() {
         setSent(true);
         setTimeout(() => setSent(false), 4000);
         setFormData({ name: '', email: '', phone: '', message: '' });
+        setSubject('');
+      } else {
+        setError(true);
       }
-    } catch (error) {
-      console.error('Form submission error:', error);
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -117,16 +128,20 @@ export default function Contact() {
             className="space-y-8"
           >
             {[
-              { name: 'name', label: 'Name', type: 'text', placeholder: 'Ihr Name' },
-              { name: 'email', label: 'E-Mail', type: 'email', placeholder: 'ihre@email.de' },
-              { name: 'phone', label: 'Telefon', type: 'tel', placeholder: '+49 151 ...' },
+              { name: 'name', label: 'Name', type: 'text', placeholder: 'Ihr Name', autoComplete: 'name', required: true },
+              { name: 'email', label: 'E-Mail', type: 'email', placeholder: 'ihre@email.de', autoComplete: 'email', required: true },
+              { name: 'phone', label: 'Telefon (optional)', type: 'tel', placeholder: '+49 151 ...', autoComplete: 'tel', required: false },
             ].map((field) => (
               <div key={field.name} className="group">
-                <label className="text-datagrey text-xs tracking-widest uppercase block mb-3">
+                <label htmlFor={`contact-${field.name}`} className="text-datagrey text-xs tracking-widest uppercase block mb-3">
                   {field.label}
                 </label>
                 <input
+                  id={`contact-${field.name}`}
+                  name={field.name}
                   type={field.type}
+                  autoComplete={field.autoComplete}
+                  required={field.required}
                   value={formData[field.name]}
                   onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
                   placeholder={field.placeholder}
@@ -136,10 +151,13 @@ export default function Contact() {
             ))}
 
             <div className="group">
-              <label className="text-datagrey text-xs tracking-widest uppercase block mb-3">
+              <label htmlFor="contact-message" className="text-datagrey text-xs tracking-widest uppercase block mb-3">
                 Nachricht
               </label>
               <textarea
+                id="contact-message"
+                name="message"
+                required
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 placeholder="Erzählen Sie uns von Ihrem Projekt..."
@@ -158,12 +176,18 @@ export default function Contact() {
                   ✓ Nachricht gesendet
                 </motion.div>
               ) : (
-                <GlassButton disabled={loading}>
+                <GlassButton type="submit" disabled={loading}>
                   <span className="flex items-center gap-2">
                     {loading ? 'Wird gesendet…' : 'Nachricht senden'}
                     <Send className="w-4 h-4" />
                   </span>
                 </GlassButton>
+              )}
+              {error && (
+                <p role="alert" className="mt-4 text-sm text-red-400 leading-relaxed">
+                  Die Nachricht konnte leider nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an{' '}
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="text-neon hover:underline">{CONTACT_EMAIL}</a>.
+                </p>
               )}
             </div>
           </motion.form>
@@ -235,7 +259,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Social — Platzhalter, folgt später */}
+            {/* Social */}
             <div className="space-y-3">
               <span className="text-datagrey text-xs tracking-widest uppercase">Folgen Sie uns</span>
               <div className="flex gap-3">
@@ -244,6 +268,7 @@ export default function Contact() {
                     <a key={link.label}
                     href={link.href}
                     title={link.label}
+                    aria-label={link.label}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:scale-110 hover:border-white/30 transition-all"
@@ -252,7 +277,6 @@ export default function Contact() {
                   </a>
                 ))}
               </div>
-              <p className="text-datagrey text-xs"></p>
             </div>
           </motion.div>
         </div>

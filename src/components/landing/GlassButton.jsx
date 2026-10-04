@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
-export default function GlassButton({ children, href, variant = 'primary', className = '' }) {
-  const base = "relative inline-flex items-center justify-center rounded-full font-medium transition-all duration-500 overflow-hidden group";
+export default function GlassButton({ children, href, variant = 'primary', className = '', type = 'button', disabled = false }) {
+  const base = "relative inline-flex items-center justify-center rounded-full font-medium transition-all duration-500 overflow-hidden group disabled:opacity-60 disabled:cursor-not-allowed";
   
   const variants = {
     primary: "glass px-8 py-4 text-neon border border-neon/20 hover:border-neon/60 hover:glow-blue-strong text-base",
@@ -31,8 +31,10 @@ export default function GlassButton({ children, href, variant = 'primary', class
 
   return (
     <motion.button
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      type={type}
+      disabled={disabled}
+      whileHover={disabled ? undefined : { scale: 1.02 }}
+      whileTap={disabled ? undefined : { scale: 0.98 }}
       className={`${base} ${variants[variant]} ${className}`}
     >
       {content}
